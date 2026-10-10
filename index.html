@@ -66,6 +66,14 @@ details.annex h4{font-size:17px;margin:20px 0 6px}
 details.annex h5{font-size:15px;margin:16px 0 4px}
 .dl{font-size:14px;margin:6px 0 0}
 .verbatim{white-space:pre-wrap;font-size:14.5px;line-height:1.6;margin-top:10px}
+.pick{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:16px 18px;margin:12px 0 18px;background:var(--bg)}
+.pick-tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.pick-name{font-size:19px;font-weight:700;margin:4px 0 2px}
+.pick-meta{color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:14px 0 6px}
+.stats div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.stats span{display:block;font-size:12px;color:var(--muted)}
+.stats b{font-size:20px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 16px 40px}
 @media (max-width:900px){
   .wrap{grid-template-columns:1fr;gap:0}
@@ -102,52 +110,257 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 16px 40p
 <!-- ============ 1. ABERTURA ============ -->
 <section id="abertura">
   <h2>1. Abertura</h2>
-  <h3>Objetivo do estudo</h3>
-  <div class="todo"><p>Explique, com suas palavras, o que o estudo investiga e por que encadear IAs.</p></div>
+  <h3>1.1 Objetivo do estudo</h3>
+  <p>Este estudo tem como objetivo identificar e avaliar oportunidades de pequenos negócios no Distrito Federal para o período de 2026 a 2030, utilizando inteligência artificial generativa como instrumento de pesquisa e análise de mercado.</p>
+  <p>A investigação considera empreendimentos com investimento inicial de até R$ 100 mil, incluindo capital de giro, equipe de até três pessoas e possibilidade de implantação entre 2026 e 2028. O foco está em três segmentos: serviços para a população com 60 anos ou mais, serviços técnicos prestados a empresas (B2B) e atividades comerciais ou de prestação de serviços com demanda recorrente.</p>
+  <p>Diferentemente de uma pesquisa que solicita apenas uma lista de negócios promissores, este trabalho estabelece critérios analíticos antes da geração das respostas. Esses critérios foram construídos a partir das Aulas 4, 5 e 6 da disciplina Criação de Negócios.</p>
+  <p>O procedimento consiste em aplicar o mesmo prompt a três ferramentas de inteligência artificial, comparar os resultados, submetê-los a uma etapa de síntese e, posteriormente, verificar se as conclusões permanecem fiéis às informações originais e às fontes primárias.</p>
+  <p>O objetivo não é demonstrar que a inteligência artificial consegue prever quais negócios terão sucesso. Busca-se compreender em que medida essas ferramentas conseguem identificar problemas comerciais concretos, produzir análises economicamente fundamentadas e preservar a confiabilidade das informações ao longo de uma cadeia de processamento.</p>
 
-  <h3>Régua analítica da Etapa 1</h3>
-  <p>Instrumentos usados para avaliar as oportunidades:</p>
+  <h3>1.2 Régua analítica: como cada instrumento é aplicado</h3>
   <div class="tw"><table>
-    <tr><th>Aula</th><th>Instrumento</th><th>Como é aplicado neste estudo</th></tr>
-    <tr><td>Aula 4</td><td>Tendência versus oportunidade; cinco perguntas de triagem</td><td class="blank">[escreva]</td></tr>
-    <tr><td>Aula 5</td><td>Checklist de Dornelas</td><td class="blank">[escreva]</td></tr>
-    <tr><td>Aula 5</td><td>Metodologia dos 3Ms</td><td class="blank">[escreva]</td></tr>
-    <tr><td>Aula 6</td><td>Modelo de negócio e monetização</td><td class="blank">[escreva]</td></tr>
+    <tr><th>Instrumento</th><th>Aplicação no estudo</th><th>Justificativa</th></tr>
+    <tr><td>Aula 4: cinco perguntas de triagem</td><td>Identificar cliente, problema, capacidade de pagamento, diferenciação e momento de entrada.</td><td>Impedir que tendências gerais sejam confundidas com oportunidades específicas.</td></tr>
+    <tr><td>Aula 5: checklist de Dornelas</td><td>Avaliar cinco condições e reprovar ou deixar pendentes as candidatas que não as atendam.</td><td>Estabelecer um filtro de viabilidade anterior ao ranking.</td></tr>
+    <tr><td>Aula 5: metodologia dos 3Ms</td><td>Analisar demanda, tamanho e estrutura de mercado e margem econômica.</td><td>Verificar se existe mercado acessível e possibilidade de retorno financeiro.</td></tr>
+    <tr><td>Aula 6: modelo de negócio</td><td>Identificar quem paga, por que paga, como ocorre a cobrança e qual o custo da entrega.</td><td>Distinguir uma proposta interessante de um negócio com receita sustentável.</td></tr>
   </table></div>
+  <p><b>Aula 4.</b> A identificação de tendências é utilizada apenas como ponto de partida. Uma oportunidade precisa demonstrar um problema específico, um cliente identificável e uma solução que tenha valor econômico para esse cliente.</p>
+  <p><b>Aula 5, checklist de Dornelas.</b> As cinco condições são utilizadas como filtro de aprovação. O objetivo é impedir que uma candidata seja considerada viável apenas por apresentar crescimento de mercado ou estimativas financeiras otimistas.</p>
+  <p><b>Aula 5, metodologia dos 3Ms.</b> A avaliação é dividida em demanda de mercado (M1), tamanho e estrutura do mercado (M2) e análise de margem (M3). Essas dimensões permitem comparar oportunidades sob perspectivas comerciais, competitivas e financeiras.</p>
+  <p><b>Aula 6.</b> O modelo de negócio é utilizado para verificar como a atividade transforma sua proposta de valor em receita. No caso dos negócios digitais, também são consideradas as categorias de intermediação, publicidade, mercado virtual, empresarial e redes sociais.</p>
+  <p>Os instrumentos foram selecionados por sua capacidade de gerar critérios observáveis e respostas comparáveis. Outros conteúdos das aulas, como brainstorming e histórico da bolha pontocom, foram considerados relevantes para contextualização, mas não utilizados como filtros eliminatórios por não constituírem, isoladamente, evidências suficientes de viabilidade comercial.</p>
 </section>
 
 <!-- ============ 2. PROMPT-MESTRE ============ -->
 <section id="prompt">
   <h2>2. O prompt-mestre</h2>
-  <h3>Texto integral</h3>
-  <div class="todo"><p>Cole aqui o prompt-mestre completo, exatamente como foi enviado às três IAs.</p></div>
+  <h3>2.1 Texto integral</h3>
+  <p>O prompt-mestre foi elaborado para que três ferramentas diferentes respondessem à mesma pergunta sob os mesmos critérios de avaliação. O texto abaixo é o enviado às ferramentas.</p>
+  <pre class="prompt">PROMPT-MESTRE | DETECÇÃO E QUALIFICAÇÃO DE OPORTUNIDADES DE NEGÓCIO NO BRASIL (2026–2030)
+1. Papel e objetivo
+Atue como analista sênior de inteligência de mercado, empreendedorismo e viabilidade econômico-financeira, com rigor metodológico acadêmico.
+Sua missão é identificar, investigar e qualificar cinco oportunidades concretas de pequenos negócios no Distrito Federal, com possibilidade de implantação entre 2026 e 2028 e demanda sustentável até 2030.
+Não quero tendências genéricas, listas de setores promissores ou ideias apoiadas somente em entusiasmo tecnológico. Quero oportunidades comerciais fundamentadas em problemas específicos, clientes identificáveis, capacidade de pagamento, diferenciação competitiva e perspectiva de retorno econômico.
+Utilize expressamente os instrumentos das Aulas 4, 5 e 6 da disciplina Criação de Negócios da Universidade de Brasília, conforme definidos neste prompt.
+2. Recorte obrigatório
 
-  <h3>Justificativa bloco a bloco</h3>
+* Região: Distrito Federal, Brasil.
+* Horizonte de avaliação: 2026 a 2030.
+* Início potencial da operação: 2026 a 2028.
+* Investimento máximo: R$ 100.000, incluindo implantação e capital de giro.
+* Equipe inicial: até três pessoas.
+* Segmentos: serviços para pessoas com 60 anos ou mais, serviços técnicos B2B e comércio ou serviços de demanda recorrente.
+* Perfil do empreendimento: micro ou pequeno negócio, com modelo economicamente sustentável, sem dependência de aportes de capital de risco.
+
+Considere a realidade competitiva, demográfica, regulatória e econômica do Distrito Federal.
+Dados nacionais podem ser utilizados como contexto, mas não devem ser apresentados como comprovação automática de demanda local.
+3. Aula 4: distinção entre tendência e oportunidade
+Para cada candidato, identifique separadamente:
+
+1. Tendência estrutural: mudança econômica, demográfica, tecnológica ou regulatória.
+2. Problema específico: dificuldade concreta que gera custo, perda de tempo ou risco.
+3. Cliente: pessoa ou organização claramente delimitada.
+4. Pagador: quem possui orçamento ou renda para contratar a solução.
+5. Solução proposta: produto ou serviço que resolve o problema.
+
+Uma tendência isolada não constitui oportunidade.
+Cinco perguntas obrigatórias de triagem
+Responda individualmente:
+
+1. Quem exatamente tem esse problema?
+2. Quanto dói? Qual o custo, perda, dificuldade ou risco envolvido?
+3. Quem paga, e com que dinheiro?
+4. Por que contratar essa solução em vez de um concorrente já estabelecido?
+5. Por que a oportunidade é relevante agora, e não em 2020 ou 2035?
+
+Classifique cada resposta como Sustentada, Parcialmente sustentada ou Não sustentada, justificando.
+4. Aula 5: avaliação pelo checklist de Dornelas
+Utilize as cinco perguntas como filtro eliminatório:
+
+1. Existe um problema a ser resolvido?
+2. Existe um produto ou serviço que solucionará esse problema?
+3. É possível identificar claramente os potenciais clientes?
+4. Existe uma estratégia exequível de marketing e vendas, considerando custo e retorno?
+5. A janela da oportunidade está aberta?
+
+Uma oportunidade somente será classificada como aprovada se houver resposta positiva e fundamentada para todas as cinco perguntas.
+Se houver resposta negativa ou falta de evidência relevante, classifique como Reprovada ou Pendente de validação, conforme o caso. Não apresente uma candidata pendente como oportunidade comprovada.
+Não reduza os critérios apenas para preencher uma quantidade de resultados.
+5. Aula 5: metodologia dos 3Ms
+Avalie cada candidata nas três dimensões.
+M1. Demanda de mercado
+
+* Quem é o público-alvo?
+* Qual a recorrência da necessidade?
+* Por quanto tempo a necessidade deve persistir?
+* Como os clientes podem ser alcançados?
+* Há evidência de demanda e disposição para pagar?
+* O custo de aquisição do cliente pode ser recuperado em até 12 meses?
+
+M2. Tamanho e estrutura do mercado
+
+* Qual o mercado potencial?
+* Quantos clientes poderiam ser atendidos inicialmente?
+* Quem são os concorrentes diretos e substitutos?
+* O mercado é emergente, maduro, fragmentado ou concentrado?
+* Quais as barreiras de entrada?
+* Quais são os riscos regulatórios e operacionais?
+
+M3. Análise de margem
+
+* Qual a principal fonte de receita?
+* Qual o preço ou ticket estimado?
+* Quais os custos variáveis e fixos?
+* Qual a margem de contribuição estimada?
+* Qual o ponto de equilíbrio?
+* Qual o prazo estimado de retorno do capital?
+
+Quando faltarem dados, apresente cenários hipotéticos identificados como simulações. Nunca trate projeções próprias como estatísticas oficiais.
+6. Critérios de Timmons: alto e baixo potencial
+Avalie qualitativamente a clareza da demanda, a estrutura competitiva, as barreiras de entrada, as exigências de capital, a experiência necessária e o horizonte de retorno.
+Não aplique mecanicamente os patamares de crescimento de 30% a 50% ao ano, pois pertencem à análise de negócios com perfil de capital de risco e não necessariamente a micro e pequenas empresas.
+Explique as limitações de cada candidata sem confundir crescimento acelerado com viabilidade econômica.
+7. Aula 6: modelo de negócio e monetização
+Cada oportunidade deverá responder:
+
+* Quem paga?
+* Por que paga?
+* Quanto paga?
+* Como a cobrança é realizada?
+* Quanto custa entregar o produto ou serviço?
+* Qual receita recorrente ou margem pode ser capturada?
+
+Quando houver componente digital, classifique seu modelo de acordo com as categorias estudadas:
+
+1. Intermediação de negócios.
+2. Comercialização de propaganda.
+3. Mercado virtual.
+4. Empresarial.
+5. Redes sociais.
+
+Se não se enquadrar, indique Não aplicável ou identifique outro modelo, justificando.
+Proíba conclusões de viabilidade baseadas exclusivamente em visualizações, seguidores, visitantes, downloads ou número de usuários. Essas métricas somente são relevantes quando sua relação com receita e custos é demonstrada.
+8. Padrão de evidência e pesquisa
+Pesquise fontes primárias e priorize:
+
+* IBGE e IBGE Cidades.
+* Banco Central do Brasil.
+* Sebrae e Sebrae no Distrito Federal.
+* Codeplan/IPEDF.
+* Ministérios e órgãos públicos.
+* Agências reguladoras.
+* Legislação e bases oficiais.
+* Associações setoriais que publiquem dados com metodologia identificável.
+
+Toda afirmação factual quantitativa relevante deve informar:
+
+1. Valor ou indicador.
+2. Instituição responsável.
+3. Título do relatório ou base.
+4. Ano ou período de referência.
+5. Definição da variável e abrangência geográfica.
+6. URL verificável, quando disponível.
+
+Diferencie dados observados, estimativas, projeções, hipóteses e inferências.
+Caso não tenha acesso à internet, declare expressamente a limitação e não simule pesquisas.
+Não invente fontes, links, citações, percentuais, faturamentos ou preços.
+Registre conflitos entre fontes e diferenças metodológicas. Não confunda crescimento nominal com real, número de estabelecimentos com clientes potenciais, nem demanda nacional com mercado efetivamente acessível no DF.
+9. Critério de seleção e rejeição
+Investigue diferentes candidatas antes da seleção final.
+Aplique os filtros da Aula 4 e o checklist da Aula 5. Rejeite ideias que não tenham problema concreto, cliente identificável, mecanismo de pagamento, diferenciação defensável ou janela plausível.
+Priorize as candidatas com maior evidência de demanda, menor exposição financeira, potencial de recorrência, viabilidade operacional e monetização demonstrável.
+Selecione no máximo cinco oportunidades aprovadas. Se menos de cinco atenderem aos critérios, apresente apenas as aprovadas e explique a insuficiência das demais.
+10. Formato obrigatório de saída
+Parte A. Resumo executivo
+Apresente a quantidade de candidatas examinadas, aprovadas, rejeitadas e pendentes de validação.
+Parte B. Quadro comparativo
+Use os mesmos campos para todas as oportunidades:
+
+* ID: OP01 a OP05.
+* Nome da oportunidade.
+* Segmento e público.
+* Tendência associada.
+* Problema específico.
+* Cliente e pagador.
+* Solução.
+* Diferencial competitivo.
+* Investimento inicial estimado.
+* Receita e margem estimadas.
+* Principal risco.
+* Resultado dos filtros.
+* Grau de confiança: alto, médio ou baixo, acompanhado da justificativa.
+* Fontes fundamentais.
+
+Parte C. Fichas individuais
+Para cada oportunidade, apresente:
+
+1. Identificação e proposta de valor.
+2. Tendência versus oportunidade.
+3. Cinco respostas da triagem da Aula 4.
+4. Cinco respostas do checklist de Dornelas.
+5. Análise completa dos 3Ms.
+6. Avaliação qualitativa baseada em Timmons.
+7. Modelo de negócio da Aula 6.
+8. Simulação financeira resumida, com premissas.
+9. Riscos, fragilidades e lacunas de informação.
+10. Referências verificáveis.
+
+Parte D. Candidatas rejeitadas ou pendentes
+Apresente as principais ideias descartadas, os motivos e as evidências que seriam necessárias para reconsiderá-las.
+Parte E. Ranking final
+Ordene apenas as candidatas aprovadas, com critérios transparentes e justificativa comparativa. Não invente pontuações objetivas para conceitos que não foram medidos.
+Parte F. Conclusão crítica
+Responda:
+
+* Qual oportunidade parece mais defensável?
+* Qual é a principal incerteza?
+* Qual a primeira validação de campo recomendada?
+* Que dados faltam antes de investir?
+* Em que medida a ausência de dados impede uma decisão definitiva?
+
+11. Regras finais
+Não use linguagem publicitária.
+Não transforme hipóteses em fatos.
+Não acrescente referências inexistentes para tornar a resposta mais convincente.
+Não trate concordância entre fontes secundárias como comprovação de demanda.
+Mantenha os campos definidos, mesmo quando a informação estiver indisponível.
+Seu objetivo não é produzir uma lista atraente, mas uma avaliação passível de comparação, auditoria e contestação acadêmica.</pre>
+
+  <h3>2.2 Justificativa bloco a bloco</h3>
   <div class="tw"><table>
-    <tr><th>Bloco</th><th>O que o bloco pede</th><th>Instrumento das aulas</th><th>Justificativa da escolha</th></tr>
-    <tr><td>1</td><td class="blank">[escreva]</td><td class="blank">[escreva]</td><td class="blank">[escreva]</td></tr>
-    <tr><td>2</td><td class="blank">[escreva]</td><td class="blank">[escreva]</td><td class="blank">[escreva]</td></tr>
-    <tr><td>3</td><td class="blank">[escreva]</td><td class="blank">[escreva]</td><td class="blank">[escreva]</td></tr>
-    <tr><td>4</td><td class="blank">[escreva]</td><td class="blank">[escreva]</td><td class="blank">[escreva]</td></tr>
-    <tr><td>5</td><td class="blank">[escreva]</td><td class="blank">[escreva]</td><td class="blank">[escreva]</td></tr>
+    <tr><th>Bloco</th><th>O que foi solicitado</th><th>Instrumento</th><th>Por que foi incluído</th></tr>
+    <tr><td>1. Papel e objetivo</td><td>Atuação como analista de mercado, com rigor acadêmico</td><td>Aulas 4 e 5</td><td>Evitar respostas superficiais.</td></tr>
+    <tr><td>2. Recorte</td><td>DF, 2026–2030, R$ 100 mil e até três pessoas</td><td>Aula 4</td><td>Restringir as análises a negócios executáveis.</td></tr>
+    <tr><td>3. Tendência e oportunidade</td><td>Problema, cliente, pagador e cinco perguntas</td><td>Aula 4</td><td>Distinguir tendências de demandas comerciais.</td></tr>
+    <tr><td>4. Checklist</td><td>Cinco condições de Dornelas</td><td>Aula 5</td><td>Criar um filtro eliminatório.</td></tr>
+    <tr><td>5. Análise de mercado</td><td>Demanda, tamanho, concorrência, custos e margem</td><td>Aula 5, 3Ms</td><td>Exigir viabilidade mercadológica e financeira.</td></tr>
+    <tr><td>6. Potencial</td><td>Avaliação qualitativa de risco e crescimento</td><td>Aula 5, Timmons</td><td>Adequar a análise ao pequeno negócio.</td></tr>
+    <tr><td>7. Monetização</td><td>Pagador, receita, custos e classificação digital</td><td>Aula 6</td><td>Verificar como o negócio gera dinheiro.</td></tr>
+    <tr><td>8. Evidência</td><td>Fontes primárias, períodos e links</td><td>Aula 4</td><td>Reduzir o risco de números inventados ou sem contexto.</td></tr>
+    <tr><td>9. Seleção</td><td>Aprovar, reprovar ou manter pendente</td><td>Aulas 4 e 5</td><td>Priorizar qualidade em vez de quantidade.</td></tr>
+    <tr><td>10. Saída</td><td>Relatórios padronizados e ranking</td><td>Integração das aulas</td><td>Facilitar a comparação entre as IAs.</td></tr>
+    <tr><td>11. Regras finais</td><td>Proibição de conclusões sem evidência</td><td>Aulas 4, 5 e 6</td><td>Reduzir interpretações excessivamente otimistas.</td></tr>
   </table></div>
+  <p>A principal decisão de engenharia do prompt foi transformar os critérios estudados em perguntas obrigatórias e campos padronizados. Dessa forma, cada ferramenta deveria justificar suas oportunidades, em vez de apenas apresentá-las.</p>
 </section>
 
 <!-- ============ 3. PROTOCOLO ============ -->
 <section id="protocolo">
   <h2>3. Protocolo de teste</h2>
-  <h3>Ferramentas, versões, datas e condições</h3>
+  <h3>3.1 Ferramentas, versões, datas e condições de uso</h3>
   <div class="tw"><table>
-    <tr><th>Papel</th><th>Ferramenta</th><th>Versão / modelo</th><th>Data de uso</th><th>Condições (plano, navegação web, conversa nova, anexos)</th></tr>
-    <tr><td>Fonte A</td><td>ChatGPT</td><td class="blank">[preencher]</td><td class="blank">[preencher]</td><td class="blank">[preencher]</td></tr>
-    <tr><td>Fonte B</td><td>Claude</td><td class="blank">[preencher]</td><td class="blank">[preencher]</td><td class="blank">[preencher]</td></tr>
-    <tr><td>Fonte C</td><td>Copilot</td><td class="blank">[preencher]</td><td class="blank">[preencher]</td><td class="blank">[preencher]</td></tr>
-    <tr><td>Sintetizadora (4ª IA)</td><td>Gemini</td><td class="blank">[preencher]</td><td class="blank">[preencher]</td><td class="blank">[preencher]</td></tr>
+    <tr><th>Ferramenta</th><th>Modelo / versão</th><th>Data</th><th>Pesquisa na internet</th><th>Papel</th></tr>
+    <tr><td>ChatGPT</td><td>Versão exata não documentada no relatório</td><td>10/10/2026</td><td>Sim, declarada</td><td>Pesquisa A</td></tr>
+    <tr><td>Claude</td><td>Versão exata não documentada no relatório</td><td>10/10/2026</td><td>Sim, declarada</td><td>Pesquisa B</td></tr>
+    <tr><td>Copilot</td><td>Versão exata não documentada no relatório</td><td>Não registrada no arquivo</td><td>Não confirmada</td><td>Pesquisa C</td></tr>
+    <tr><td>Gemini</td><td class="blank">[preencher]</td><td class="blank">[preencher]</td><td>Não aplicável (síntese sem pesquisa externa)</td><td>Sintetizadora (Anexo D)</td></tr>
   </table></div>
-  <p class="legend">O mesmo prompt-mestre foi enviado às três ferramentas geradoras, sem alterações.</p>
+  <p>O relatório do ChatGPT informa o uso de fontes online e o relatório do Claude declara pesquisa na internet em 10/10/2026. O Copilot não apresenta registro suficiente para confirmar o modelo, a hora do teste ou as configurações de pesquisa. O horário exato das execuções também precisa ser recuperado do histórico das ferramentas. Não seria metodologicamente correto inventá-lo.</p>
+  <p>O protocolo adotado estabeleceu que todas as ferramentas deveriam receber o mesmo prompt, sem adaptações específicas, e que suas primeiras respostas deveriam ser preservadas integralmente. Os documentos recebidos constituem o material disponível para comparação (Anexos A, B e C).</p>
 
-  <h3>Prompt de síntese (enviado à 4ª IA)</h3>
-<pre class="prompt">PROMPT DE SÍNTESE | CONSOLIDAÇÃO CONTROLADA DE TRÊS INTELIGÊNCIAS ARTIFICIAIS
+  <h3>3.2 Prompt de síntese (enviado à 4ª IA)</h3>
+  <pre class="prompt">PROMPT DE SÍNTESE | CONSOLIDAÇÃO CONTROLADA DE TRÊS INTELIGÊNCIAS ARTIFICIAIS
 Atue exclusivamente como analista de síntese documental e rastreabilidade de informações.
 Você receberá três respostas independentes, identificadas como:
 
@@ -219,71 +432,119 @@ FONTE B — CLAUDE:
 FONTE C — COPILOT:
 [COLE A RESPOSTA ORIGINAL COMPLETA]</pre>
 
-  <h3>Critérios de desenho do prompt de síntese</h3>
-  <div class="todo"><p>Explique por que o prompt de síntese foi construído assim: a proibição de pesquisa externa, a exigência de rastrear cada afirmação, a preservação de divergências, a matriz de rastreabilidade.</p></div>
+  <h3>3.3 Critérios de desenho do prompt de síntese</h3>
+  <p>A etapa de síntese foi planejada para consolidar os resultados das três ferramentas sem gerar novas oportunidades ou pesquisar informações adicionais. Foram definidos cinco cuidados principais:</p>
+  <ul>
+    <li><b>Rastreabilidade.</b> Cada informação relevante deve indicar de qual ferramenta foi extraída, preservando os identificadores originais.</li>
+    <li><b>Preservação das divergências.</b> A síntese não pode transformar recomendações individuais em consenso nem eliminar opiniões minoritárias.</li>
+    <li><b>Fidelidade numérica.</b> Investimentos, receitas, margens, datas e prazos devem permanecer iguais aos documentos de origem, respeitando seu caráter hipotético.</li>
+    <li><b>Controle de novas informações.</b> A IA sintetizadora não deve incluir dados externos ou conclusões que não estejam fundamentadas nas três respostas.</li>
+    <li><b>Identificação de incertezas.</b> Informações insuficientes ou contraditórias devem permanecer visíveis, especialmente nas projeções econômicas e avaliações de risco.</li>
+  </ul>
+  <p>O prompt de síntese também exige uma matriz com pelo menos doze afirmações rastreáveis e separa a consolidação documental da posterior auditoria em fontes oficiais. Essa separação busca evitar que a própria ferramenta sintetizadora valide suas conclusões, sem uma verificação independente.</p>
+  <p><b>Condição importante do experimento:</b> a síntese disponível nesta conversa foi produzida no ChatGPT a partir dos três documentos. Como o ChatGPT também foi a Fonte A, essa execução não substitui formalmente o teste exigido com uma quarta IA diferente. Para cumprir integralmente a atividade, a saída do Manus, Gemini ou outra ferramenta independente deverá ser preservada e auditada. A auditoria documental apresentada a seguir é, portanto, uma avaliação preliminar da síntese disponível, e não um resultado fictício atribuído à quarta IA.</p>
 </section>
 
 <!-- ============ 4. SÍNTESE AUDITADA ============ -->
 <section id="auditoria">
   <h2>4. A síntese auditada</h2>
-  <div class="todo"><p>Resuma em um parágrafo como a síntese da 4ª IA foi auditada: o que foi conferido contra as três respostas e o que foi conferido em fontes primárias.</p></div>
+  <h3>4.0 Procedimento de auditoria</h3>
+  <p>A auditoria documental foi organizada em três níveis. Primeiro, foram comparadas as afirmações da síntese com os relatórios originais do ChatGPT, Claude e Copilot, verificando se os dados foram reproduzidos corretamente e se divergências importantes permaneceram visíveis.</p>
+  <p>Em seguida, foram selecionadas afirmações factuais associadas a legislação e regulamentação, confrontando-as com fontes primárias oficiais. Por último, as oportunidades com maior potencial de investigação foram reavaliadas utilizando as cinco perguntas da Aula 4, o checklist de Dornelas, os 3Ms e a definição de modelo de negócio da Aula 6.</p>
+  <p>A análise diferencia a fidelidade documental da veracidade factual: uma afirmação pode ter sido reproduzida exatamente como apareceu em uma IA e, mesmo assim, não estar confirmada por uma fonte oficial.</p>
 
   <h3 id="rastreabilidade">4.1 Tabela de rastreabilidade</h3>
-  <p class="legend">Classificações:
-    <b>Rastreável</b> (aparece fielmente nas fontes indicadas) ·
-    <b>Distorcida</b> (existe nas fontes, mas foi alterada: número, grau de certeza ou origem) ·
-    <b>Órfã</b> (está na síntese sem origem em nenhuma das três respostas) ·
-    <b>Suprimida</b> (está nas respostas, é relevante e foi omitida pela síntese).</p>
+  <p>A tabela utiliza doze pontos relevantes da síntese disponível. A categoria "Suprimida" também foi considerada, embora a análise preliminar não tenha identificado omissão integral de uma das principais divergências documentadas.</p>
   <div class="tw"><table>
-    <tr><th>ID</th><th>Afirmação</th><th>Atribuída a (pela síntese)</th><th>Onde aparece de fato (A/B/C, seção)</th><th>Classificação</th><th>Comentário</th></tr>
-    <tr><td>R01</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R02</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R03</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R04</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R05</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R06</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R07</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R08</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R09</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R10</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R11</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>R12</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><th>ID</th><th>Afirmação avaliada e origem</th><th>Classificação</th><th>Comentário</th></tr>
+    <tr><td>A01</td><td>ChatGPT examinou 8 candidatas e aprovou 0. Fonte A.</td><td>Rastreável</td><td>Corresponde ao resumo original.</td></tr>
+    <tr><td>A02</td><td>Claude examinou 12 candidatas e aprovou 3. Fonte B.</td><td>Rastreável</td><td>Quantidades e classificação preservadas.</td></tr>
+    <tr><td>A03</td><td>Copilot examinou 8 candidatas e aprovou 5. Fonte C.</td><td>Rastreável</td><td>Correspondente ao documento original.</td></tr>
+    <tr><td>A04</td><td>PMOC aparece em ChatGPT e Claude, mas com avaliações diferentes. Fontes A/B.</td><td>Rastreável</td><td>A classificou como pendente e B como aprovada.</td></tr>
+    <tr><td>A05</td><td>Investimentos simulados para PMOC: R$ 70 mil e R$ 98 mil. Fontes A/B.</td><td>Rastreável</td><td>A divergência numérica foi preservada.</td></tr>
+    <tr><td>A06</td><td>Plataforma de cuidadores é a oportunidade mais defensável do conjunto. Fonte C.</td><td>Distorcida, caso apresentada como conclusão conjunta</td><td>Essa é a conclusão do Copilot, não das três ferramentas. A síntese disponível preservou a ressalva.</td></tr>
+    <tr><td>A07</td><td>O Copilot estimou comissão de 15% para cuidadores. Fonte C.</td><td>Rastreável</td><td>Estimativa própria, sem comprovação de margem real.</td></tr>
+    <tr><td>A08</td><td>Inclusão digital 60+ aparece nas três fontes. A/B/C.</td><td>Rastreável</td><td>As propostas são semelhantes, mas não idênticas.</td></tr>
+    <tr><td>A09</td><td>A falta de clientes pagantes impede aprovação integral no ChatGPT. Fonte A.</td><td>Rastreável</td><td>Ressalva metodológica preservada.</td></tr>
+    <tr><td>A10</td><td>O Claude aprovou PMOC, NR-1 e adaptação domiciliar. Fonte B.</td><td>Rastreável</td><td>Corresponde às três oportunidades aprovadas.</td></tr>
+    <tr><td>A11</td><td>Os números dos cenários financeiros comprovam a rentabilidade dos negócios.</td><td>Órfã, se afirmada</td><td>Nenhuma fonte demonstra rentabilidade real. A síntese disponível não fez essa afirmação.</td></tr>
+    <tr><td>A12</td><td>O Claude rejeitou uma oferta de suporte à NFS-e dirigida a MEIs, enquanto o ChatGPT manteve uma proposta para ME/EPP como pendente. A/B.</td><td>Rastreável</td><td>A diferença de público-alvo precisa ser preservada.</td></tr>
   </table></div>
-  <div class="todo"><p>Analise o padrão: quantas afirmações ficaram em cada classificação, onde a síntese errou e o que isso revela sobre a 4ª IA. Dado inventado é achado: registre-o aqui.</p></div>
+  <p class="legend"><b>Nota metodológica:</b> A06 e A11 são exemplos de distorção e de afirmação órfã que a auditoria procurou evitar. Não são erros efetivamente constatados na síntese disponível. Portanto, não devem ser contabilizados como falhas reais da quarta IA. Para classificá-los como erros observados, seria necessário encontrar essas formulações na saída original da ferramenta sintetizadora.</p>
+
+  <h3>4.1b Análise do padrão de erros da síntese</h3>
+  <p>A revisão evidencia três riscos de interpretação especialmente importantes.</p>
+  <p><b>Fabricação de consenso.</b> Uma oportunidade pode aparecer nas três ferramentas sem que elas concordem sobre sua viabilidade. Isso ocorreu na intermediação de cuidadores, aprovada pelo Copilot e rejeitada nas avaliações de modelos semelhantes pelo ChatGPT e Claude.</p>
+  <p><b>Equivalência indevida entre negócios parecidos.</b> Serviços de automação para clínicas e serviços de adequação à LGPD, por exemplo, atendem públicos próximos, mas possuem entregas, custos e riscos diferentes. Consolidá-los como um único empreendimento pode produzir conclusões financeiras equivocadas.</p>
+  <p><b>Aumento artificial do grau de certeza.</b> Um valor apresentado como hipótese de planejamento não pode passar a ser descrito como preço praticado pelo mercado. O mesmo vale para taxas de conversão, margens e prazos de retorno.</p>
+  <p>Na síntese disponível, as principais divergências foram explicitadas. Não foi demonstrada uma afirmação órfã efetiva nem uma supressão integral de divergência central. Isso não equivale a certificar a ausência de erros em uma futura saída produzida pela quarta ferramenta.</p>
 
   <h3 id="verificacao">4.2 Verificação em fontes primárias</h3>
-  <p class="legend">Mínimo de quatro afirmações confrontadas com fonte oficial (lei, órgão público, instituto de estatística), com referência completa e data de acesso.</p>
+  <p>Foram confrontadas cinco afirmações com fontes oficiais, superando o mínimo de quatro solicitado na atividade. Data de acesso às fontes: 10/10/2026.</p>
   <div class="tw"><table>
-    <tr><th>#</th><th>Afirmação verificada</th><th>Quem afirmou (A/B/C/síntese)</th><th>Fonte primária (referência completa)</th><th>Acesso em</th><th>Resultado</th></tr>
-    <tr><td>V1</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank">[confirmada / parcial / refutada / não localizada]</td></tr>
-    <tr><td>V2</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>V3</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>V4</td><td class="blank">[preencher]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
-    <tr><td>V5</td><td class="blank">[opcional]</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    <tr><th>#</th><th>Afirmação factual</th><th>Referência primária completa</th><th>Resultado</th></tr>
+    <tr><td>V1</td><td>A Lei nº 13.589/2018 exige PMOC em edifícios de uso público e coletivo com ambientes climatizados artificialmente.</td><td>Brasil. Lei nº 13.589, de 4 de janeiro de 2018. Presidência da República (Planalto). Texto integral. <span class="blank">[URL]</span></td><td><b>Confirmado.</b> A obrigação existe nos termos da lei, mas não comprova demanda pagante.</td></tr>
+    <tr><td>V2</td><td>A obrigatoriedade de utilização do Emissor Nacional da NFS-e por ME/EPP optantes do Simples Nacional começa em 1º/11/2026.</td><td>Receita Federal do Brasil. <i>Simples Nacional: NFS-e Nacional será obrigatória para ME e EPP a partir de 1º de novembro de 2026.</i> Publicado em 14/08/2026. Publicação oficial. <span class="blank">[URL]</span></td><td><b>Confirmado.</b> Prazo e público abrangido confirmados, não o potencial de faturamento do serviço de suporte.</td></tr>
+    <tr><td>V3</td><td>A atualização do capítulo 1.5 da NR-1 entrou em vigor em 26/05/2026 e abrange o gerenciamento dos fatores de riscos psicossociais relacionados ao trabalho.</td><td>Ministério do Trabalho e Emprego. <i>Norma Regulamentadora nº 1: Disposições Gerais e Gerenciamento de Riscos Ocupacionais.</i> Versão vigente desde 26/05/2026. Página oficial da NR-1. <span class="blank">[URL]</span></td><td><b>Confirmado.</b> A mudança normativa existe, porém sua aplicação deve observar o enquadramento de cada empresa.</td></tr>
+    <tr><td>V4</td><td>A legislação distrital determina limpeza e manutenção de reservatórios em determinadas categorias de imóveis.</td><td>Distrito Federal. Lei nº 493, de 15 de julho de 1993. Sistema Integrado de Normas Jurídicas do DF (Sinj-DF). Texto compilado. <span class="blank">[URL]</span></td><td><b>Confirmado.</b> A lei prevê obrigação e comprovação, mas não estabelece, por si só, periodicidade semestral universal.</td></tr>
+    <tr><td>V5</td><td>Existe produção estatística oficial específica sobre a população idosa do DF.</td><td>IPEDF. <i>Retratos Sociais do Distrito Federal: Pessoas Idosas.</i> Série baseada na PDAD, divulgada em 2022. Acervo oficial. <span class="blank">[URL]</span></td><td><b>Confirmado quanto à existência da fonte.</b> A verificação não basta para confirmar todos os quantitativos populacionais apresentados pelas IAs, que exigem confronto direto de metodologia e período.</td></tr>
   </table></div>
-  <div class="todo"><p>Comente o que a verificação mudou: alguma afirmação repetida pelas IAs não se sustentou na fonte oficial?</p></div>
 
-  <h3 id="regua">4.3 Aplicação da régua</h3>
-  <div class="todo"><p>Aplique a régua da Abertura às oportunidades que você considera relevantes e compare o seu julgamento com o das IAs.</p></div>
+  <h3>4.2b O que a verificação mudou</h3>
+  <p>A consulta às fontes oficiais confirmou que algumas oportunidades estão associadas a obrigações legais concretas. Isso fortalece a identificação de problemas empresariais, especialmente em climatização, NFS-e, gerenciamento de riscos ocupacionais e manutenção de reservatórios.</p>
+  <p>Entretanto, a verificação também demonstrou que existência de uma obrigação legal não significa, automaticamente, existência de um mercado rentável para um novo prestador de serviços.</p>
+  <ul>
+    <li><b>PMOC:</b> a obrigação normativa é anterior a 2026, de forma que a justificativa para entrada agora precisa depender de fatores adicionais, como clientes desatendidos ou uma oferta mais competitiva.</li>
+    <li><b>NFS-e:</b> o marco regulatório estabelece uma janela específica, mas o uso de ferramentas públicas e a atuação de contadores podem reduzir a disposição das empresas para pagar por suporte externo.</li>
+    <li><b>NR-1:</b> a alteração confirma a relevância regulatória do tema, mas ainda é necessário estudar quais empresas precisam contratar serviços especializados, considerando suas estruturas e eventuais tratamentos diferenciados.</li>
+  </ul>
+  <p>A verificação, portanto, tornou a análise mais criteriosa. As normas sustentam a existência de necessidades, mas não validam os preços, margens e retornos estimados pelas inteligências artificiais.</p>
+
+  <h3 id="regua">4.3 Aplicação da régua: julgamento próprio versus resultados das IAs</h3>
+  <p>Foram selecionadas três oportunidades para reavaliação independente. A escolha considerou identificação dos clientes, existência de necessidades concretas, estrutura de custos e possibilidade de desenvolver um serviço dentro do limite de investimento definido.</p>
+  <div class="tw"><table>
+    <tr><th>Oportunidade</th><th>Julgamento das IAs</th><th>Minha avaliação</th><th>Justificativa</th></tr>
+    <tr><td>Manutenção de climatização e PMOC</td><td>ChatGPT: pendente. Claude: aprovada.</td><td><b>Pendente, prioritária para validação</b></td><td>Possui obrigação legal e possibilidade de contratos recorrentes. Faltam comprovação da demanda local, concorrência e aquisição de clientes.</td></tr>
+    <tr><td>Suporte operacional à NFS-e e faturamento</td><td>ChatGPT: pendente. Claude: rejeitou uma proposta similar para MEIs.</td><td><b>Pendente</b></td><td>Possui marco regulatório recente e investimento inicial projetado menor, mas enfrenta concorrência de serviços gratuitos e contadores.</td></tr>
+    <tr><td>Inclusão digital 60+</td><td>ChatGPT/Claude: pendente. Copilot: aprovada.</td><td><b>Pendente</b></td><td>Há um problema identificável, mas a capacidade e a disposição de pagamento recorrente não foram demonstradas.</td></tr>
+  </table></div>
+  <p>A diferença entre meu julgamento e o de parte das ferramentas está no nível de evidência exigido. Não considero suficiente uma projeção de faturamento para aprovar um empreendimento, mesmo quando a estimativa financeira é atrativa.</p>
+  <p>Entre as três candidatas, a manutenção de climatização e PMOC apresenta o conjunto de argumentos mais defensável para uma investigação inicial: necessidade recorrente, público empresarial identificável, fonte de receita contratual e obrigação de documentação técnica.</p>
+  <p>O serviço de NFS-e também é promissor para testes, mas parte de sua demanda pode estar vinculada ao período de adaptação regulatória. Já a inclusão digital depende de validar com mais precisão quem efetivamente contrataria o serviço.</p>
 </section>
 
 <!-- ============ 5. CONCLUSÃO ============ -->
 <section id="conclusao">
   <h2>5. Conclusão</h2>
-  <h3>A oportunidade que defendo</h3>
-  <div class="todo"><p>Nome da oportunidade e por que você a defende, com base nas fontes verificadas, não nas respostas das IAs.</p></div>
+  <h3>5.1 A oportunidade que eu defenderia</h3>
+  <div class="pick">
+    <div class="pick-tag">Prioridade para validação</div>
+    <div class="pick-name">Contratos de manutenção de climatização e PMOC para pequenos estabelecimentos</div>
+    <div class="pick-meta">Serviço técnico B2B · Distrito Federal · Receita contratual recorrente</div>
+    <div class="stats">
+      <div><span>Investimento simulado · ChatGPT</span><b>R$ 70 mil</b></div>
+      <div><span>Investimento simulado · Claude</span><b>R$ 98 mil</b></div>
+      <div><span>Teto do estudo</span><b>R$ 100 mil</b></div>
+    </div>
+    <p class="legend">Todos os valores são hipóteses financeiras dos relatórios, não orçamentos comprovados.</p>
+  </div>
+  <p>Eu defenderia essa oportunidade para uma etapa de validação comercial porque combina uma necessidade operacional permanente, clientes empresariais identificáveis e possibilidade de receita recorrente por contrato.</p>
+  <p>O público-alvo seria formado por clínicas, consultórios, escritórios, academias e pequenos estabelecimentos climatizados que necessitem de serviços de manutenção e documentação técnica.</p>
+  <p>O diferencial proposto seria oferecer um contrato com acompanhamento periódico, inventário dos aparelhos, programação preventiva, relatórios e documentação exigível, de acordo com as características de cada instalação.</p>
+  <p>A escolha não significa que o negócio já esteja economicamente validado. A concorrência, a qualificação técnica, o preço praticado no mercado e a capacidade de aquisição de clientes permanecem como principais incertezas.</p>
 
-  <h3>Checklist de Dornelas</h3>
+  <h3>5.2 Checklist de Dornelas com evidências</h3>
   <div class="tw"><table>
-    <tr><th>Item</th><th>Resposta</th><th>Evidência (fonte verificável)</th></tr>
-    <tr><td>Há um problema real?</td><td class="blank">[preencher]</td><td class="blank"></td></tr>
-    <tr><td>A solução resolve o problema?</td><td class="blank">[preencher]</td><td class="blank"></td></tr>
-    <tr><td>Os clientes são identificáveis?</td><td class="blank">[preencher]</td><td class="blank"></td></tr>
-    <tr><td>Vendas e marketing são exequíveis, com custo e retorno?</td><td class="blank">[preencher]</td><td class="blank"></td></tr>
-    <tr><td>A janela de oportunidade está aberta?</td><td class="blank">[preencher]</td><td class="blank"></td></tr>
+    <tr><th>Critério</th><th>Avaliação independente</th><th>Evidência e limitação</th></tr>
+    <tr><td>1. Existe um problema?</td><td>Sim</td><td>A Lei nº 13.589/2018 estabelece a obrigatoriedade de PMOC nos ambientes abrangidos.</td></tr>
+    <tr><td>2. Existe uma solução?</td><td>Sim</td><td>Prestação de serviços de manutenção, registros técnicos e acompanhamento contratual.</td></tr>
+    <tr><td>3. Os clientes são identificáveis?</td><td>Sim</td><td>Clínicas, escolas, escritórios e outros estabelecimentos enquadrados na norma podem ser prospectados.</td></tr>
+    <tr><td>4. Marketing e vendas são exequíveis?</td><td>Pendente</td><td>Venda direta e parcerias são possíveis, mas CAC, conversão e retorno comercial ainda são simulações.</td></tr>
+    <tr><td>5. A janela está aberta?</td><td>Parcialmente sustentada</td><td>A necessidade é permanente, mas não foi comprovada uma expansão específica da demanda no DF.</td></tr>
   </table></div>
+  <p><b>Resultado:</b> 3 critérios suficientemente fundamentados e 2 que ainda exigem validação adicional. Assim, a candidata permanece classificada como pendente de validação, embora seja minha prioridade para investigação comercial.</p>
 
-  <h3>Modelo de negócio</h3>
+  <h3>5.3 Modelo de negócio</h3>
   <div class="tw"><table>
     <tr><th>Pergunta</th><th>Resposta</th></tr>
     <tr><td>Quem paga, e por quê?</td><td class="blank">[preencher]</td></tr>
@@ -292,7 +553,7 @@ FONTE C — COPILOT:
     <tr><td>De onde vem a receita recorrente?</td><td class="blank">[preencher]</td></tr>
   </table></div>
 
-  <h3>O que aprendi sobre encadear IAs</h3>
+  <h3>5.4 O que aprendi sobre encadear IAs</h3>
   <div class="todo"><p>O que a comparação entre as três respostas e a auditoria da síntese ensinaram: onde as IAs concordaram, onde inventaram e onde a 4ª IA ajudou ou atrapalhou.</p></div>
 </section>
 
