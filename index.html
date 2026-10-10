@@ -1,0 +1,1680 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Síntese Oportunidades DF</title>
+<meta name="description" content="Síntese consolidada de três análises de IA (ChatGPT, Claude, Copilot) sobre oportunidades de pequenos negócios no Distrito Federal, 2026–2030.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#f7f7f5; --surface:#ffffff; --ink:#1d1f23; --muted:#5b616b; --line:#e3e3df;
+  --accent:#1f5f8b; --accent-soft:#e6eff6;
+  --a:#2a7a5f; --b:#c26a1b; --c:#6b4fa8;
+  --ok:#2a7a5f; --pend:#b8860b; --rej:#b03a2e;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171a; --surface:#1d2024; --ink:#e8e8e6; --muted:#a1a6ad; --line:#30343a;
+    --accent:#6fa8d6; --accent-soft:#1f2c38;
+    --a:#5fbf9a; --b:#e69a55; --c:#a68be0; --ok:#5fbf9a; --pend:#e0b84a; --rej:#e07a6e;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171a; --surface:#1d2024; --ink:#e8e8e6; --muted:#a1a6ad; --line:#30343a;
+  --accent:#6fa8d6; --accent-soft:#1f2c38;
+  --a:#5fbf9a; --b:#e69a55; --c:#a68be0; --ok:#5fbf9a; --pend:#e0b84a; --rej:#e07a6e;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:250px 1fr;gap:32px}
+header.hero{background:var(--surface);border-bottom:1px solid var(--line)}
+header.hero .in{max-width:1180px;margin:0 auto;padding:40px 16px 28px}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h1{font-size:clamp(26px,4vw,38px);line-height:1.2;margin:8px 0 12px}
+.lead{color:var(--muted);max-width:760px;margin:0}
+.idcard{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;max-width:820px}
+.idcard div{background:var(--accent-soft);border-radius:10px;padding:10px 14px}
+.idcard span{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.idcard b{font-weight:600}
+.warn{margin-top:18px;font-size:14px;color:var(--muted);border-left:3px solid var(--pend);padding:6px 12px;max-width:820px}
+nav.toc{position:sticky;top:16px;align-self:start;margin-top:28px;font-size:14px;max-height:calc(100vh - 32px);overflow:auto}
+nav.toc b{display:block;margin-bottom:8px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+nav.toc a{display:block;padding:6px 10px;border-radius:8px;color:var(--ink);text-decoration:none}
+nav.toc a:hover,nav.toc a.on{background:var(--accent-soft);color:var(--accent)}
+main{min-width:0;padding:28px 0 60px}
+section,.intro{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin-bottom:22px}
+h2{font-size:24px;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+h3{font-size:18px;margin:24px 0 8px}
+.tw{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.45}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--accent-soft);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{background:var(--accent-soft);padding:1px 5px;border-radius:5px;font-size:.9em}
+blockquote{margin:0;padding:6px 14px;border-left:3px solid var(--accent);color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+figure.chart{margin:16px 0 26px;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+figcaption{font-size:15px;margin-bottom:10px}
+.cbox{position:relative;height:280px}
+.cbox.tall{height:440px}
+.note{font-size:13px;color:var(--muted);margin:10px 0 0}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;margin:6px 0 0}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+#matrix table td,#matrix table th{text-align:center}
+#matrix table td:first-child,#matrix table th:first-child{text-align:left}
+.chip{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;color:#fff;white-space:nowrap}
+.chip.ok{background:var(--ok)}.chip.pend{background:var(--pend)}.chip.rej{background:var(--rej)}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 16px 40px}
+@media (max-width:900px){
+  .wrap{grid-template-columns:1fr;gap:0}
+  nav.toc{position:static;margin-top:20px;max-height:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px}
+  section,.intro{padding:18px 16px}
+  .cbox.tall{height:520px}
+}
+</style>
+</head>
+<body>
+<header class="hero"><div class="in">
+  <div class="kicker">Criação de Negócios · Síntese de três IAs</div>
+  <h1>Oportunidades de pequenos negócios no Distrito Federal (2026–2030)</h1>
+  <p class="lead">Consolidação controlada das respostas de ChatGPT (Fonte A), Claude (Fonte B) e Copilot (Fonte C) ao mesmo prompt-mestre: convergências, divergências, lacunas e rastreabilidade.</p>
+  <div class="idcard">
+    <div><span>Nome</span><b>[preencher]</b></div>
+    <div><span>Matrícula</span><b>[preencher]</b></div>
+    <div><span>Disciplina</span><b>[preencher]</b></div>
+    <div><span>Semestre</span><b>[preencher]</b></div>
+  </div>
+  <p class="warn">Todos os valores financeiros são simulações produzidas pelas IAs, não dados oficiais. Nenhuma oportunidade é apresentada como comprovadamente viável. Esta síntese não incluiu pesquisa externa.</p>
+</div></header>
+<div class="wrap">
+  <nav class="toc" aria-label="Sumário"><b>Sumário</b><a href="#intro">Fontes e convenções</a><a href="#s1">1. Resumo consolidado</a>
+<a href="#s2">2. Mapa de oportunidades</a>
+<a href="#s3">3. Convergências</a>
+<a href="#s4">4. Divergências</a>
+<a href="#s5">5. Comparação pela régua das aulas</a>
+<a href="#s6">6. Oportunidades mais promissoras para investigação adicional</a>
+<a href="#s7">7. Lacunas e discordâncias não resolvidas</a>
+<a href="#s8">8. Matriz de rastreabilidade</a>
+<a href="#s9">9. Conclusão descritiva</a></nav>
+  <main>
+    <div class="intro" id="intro"><p><strong>Natureza do documento:</strong> síntese documental e de rastreabilidade de três respostas produzidas por IAs a partir do mesmo prompt-mestre. Não houve pesquisa externa nem auditoria de fontes; essa etapa ocorrerá depois.</p>
+<p><strong>Fontes analisadas</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Ferramenta</th>
+<th>Documento recebido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>ChatGPT</td>
+<td><em>Relatório_Oportunidades_DF_2026_2030 – GPT</em></td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Claude</td>
+<td><em>Oportunidades_Negocio_DF_2026-2030 – Claude</em></td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Copilot</td>
+<td><em>Oportunidades_Negocio_DF_2026-2030 – Copilot</em></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Convenções</strong></p>
+<ul>
+<li><code>A-OP01</code> = oportunidade OP01 da Fonte A (os IDs originais foram mantidos; o mesmo código "OP01" designa coisas diferentes em cada fonte).</li>
+<li><code>B-C09</code> = candidata C09 da Fonte B (a Fonte B numera as candidatas de C01 a C12).</li>
+<li><code>A-R1…R3</code>, <code>C-R1…R3</code> = candidatas rejeitadas ou pendentes que as fontes A e C listam <strong>sem ID</strong>. Esses rótulos foram criados nesta síntese apenas para referência.</li>
+<li><code>G01…G10</code> = <strong>grupos de equivalência</strong> criados nesta síntese.</li>
+<li>"Evidência insuficiente" = o conteúdo das três fontes não permite uma conclusão confiável.</li>
+<li>Todos os valores financeiros das três fontes são <strong>simulações ou estimativas das próprias IAs</strong>. A e B dizem isso de forma explícita; C não qualifica seus números.</li>
+</ul>
+<hr /></div>
+    <section id="s1"><h2>1. Resumo consolidado</h2><figure class="chart"><figcaption><b>Figura 1.</b> Resultado da triagem declarado por cada fonte (nº de candidatas).</figcaption><div class="cbox"><canvas id="c1"></canvas></div><p class="note">Fonte: Parte A de cada documento. Critérios de aprovação diferentes entre as fontes (ver Divergência D1).</p></figure>
+<h3>Principais achados</h3>
+<ol>
+<li><strong>As três fontes chegam a resultados muito diferentes.</strong></li>
+</ol>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Candidatas examinadas</td>
+<td>8</td>
+<td>12</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Aprovadas</td>
+<td><strong>0</strong></td>
+<td><strong>3</strong></td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td>Pendentes</td>
+<td>5</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Rejeitadas/reprovadas</td>
+<td>3</td>
+<td>6</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<p>A não aprova nenhuma candidata porque considera que a falta de CAC real e de vendas demonstradas "impede a aprovação integral" pelo checklist de Dornelas. B aprova três e declara as aprovações condicionadas a simulações. C aprova cinco com a frase "todas respostas positivas", sem detalhar as respostas.</p>
+<ol>
+<li>
+<p><strong>Apenas um tema aparece nas três fontes:</strong> assistência ou inclusão digital para o público 60+ (G04). As fontes divergem na classificação: A = pendente (confiança média), B = pendente, C = <strong>aprovada (confiança "Alto")</strong>.</p>
+</li>
+<li>
+<p><strong>Uma única oportunidade é tratada de forma equivalente e compatível por duas fontes:</strong> contratos de PMOC e manutenção de climatização (G01: A-OP01 e B-OP01). Ambas atribuem confiança média. Divergem no status (A = pendente; B = aprovada e 1ª do ranking) e nos números simulados.</p>
+</li>
+<li>
+<p><strong>Há conflitos diretos de decisão sobre a mesma ideia:</strong></p>
+</li>
+<li>Reservatórios (G02): A = pendente, 3ª prioridade; B = reprovada.</li>
+<li>NFS-e (G03): A = 1ª prioridade de validação; B = reprovada (públicos diferentes: ME/EPP em A, MEI em B).</li>
+<li>
+<p>Plataforma ou intermediação de cuidadores (G06): C = aprovada, 1ª do ranking e "mais defensável"; A = rejeitada (app); B = reprovada (agência, modelo diferente).</p>
+</li>
+<li>
+<p><strong>Cada fonte traz oportunidades exclusivas.</strong> B: NR-1 psicossocial (B-OP02) e adaptação domiciliar contra quedas (B-OP03), ambas aprovadas. C: centro de atividades físicas adaptadas e clube de assinatura 60+, ambos aprovados. A: atendimento clínico domiciliar (rejeitado).</p>
+</li>
+<li>
+<p><strong>Perfis de segmento diferentes.</strong> A e B concentram as candidatas com maior confiança em <strong>serviços técnicos B2B com obrigação legal</strong>. B formula isso como padrão: "as duas aprovadas com maior confiança são B2B e têm um mecanismo de pagamento criado por obrigação legal". C concentra quatro das cinco aprovadas no <strong>público 60+ (B2C)</strong>.</p>
+</li>
+</ol>
+<h3>Limitações comuns ou recorrentes</h3>
+<ul>
+<li><strong>Nenhuma das três fontes fez pesquisa de campo.</strong> A: "Não realizou entrevistas, auditoria de contratos privados, pesquisa amostral de preços". B: "Não houve pesquisa de campo: nenhuma disposição de pagar foi observada diretamente". C não traz nota de método. Em C, o item "Dados faltantes: ticket médio real no DF, taxa de adesão inicial" indica a mesma ausência.</li>
+<li><strong>A disposição de pagar é a principal incerteza nas três fontes:</strong></li>
+<li>A: "A conversão de uma necessidade em contratação paga".</li>
+<li>B: "a disposição efetiva de pagar no DF".</li>
+<li>C: "capacidade de pagamento recorrente das famílias".</li>
+<li><strong>Os números financeiros são simulações.</strong> A e B declaram isso. C não informa a origem dos valores.</li>
+<li><strong>Rastreabilidade desigual.</strong> A traz 13 referências com URL, e uma delas ([11]) não tem URL. B traz URLs e marca cada dado como [lido diretamente], [secundária] ou [não verificada nesta sessão]. C cita apenas "Sebrae-DF" e "O Globo", sem documento, data ou link.</li>
+<li><strong>As três respostas não são validações independentes.</strong> Elas partiram do mesmo prompt e, em parte, das mesmas fontes. O dado de 48% de idosos com dificuldade em aplicativos, por exemplo, aparece em A e B e é atribuído ao mesmo levantamento do IPEDF.</li>
+</ul>
+<hr /></section>
+<section id="s2"><h2>2. Mapa de oportunidades</h2><figure class="chart"><figcaption><b>Figura 2.</b> Presença de cada grupo de equivalência nas três fontes e status atribuído.</figcaption><div id="matrix"></div><p class="note">Elaboração desta síntese a partir das seções 2.1–2.4. Célula vazia = tema ausente na fonte.</p></figure>
+<p>Campos marcados como "Não detalhado" não foram informados pela fonte. A Fonte C usa um campo único "Cliente/pagador", reproduzido como está.</p>
+<h3>2.1 Fonte A (ChatGPT)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome</th>
+<th>Segmento</th>
+<th>Problema</th>
+<th>Cliente</th>
+<th>Pagador</th>
+<th>Solução</th>
+<th>Status (A)</th>
+<th>Grupo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-OP01</td>
+<td>Manutenção preventiva de climatização e PMOC</td>
+<td>Serviço técnico B2B</td>
+<td>Manutenção irregular, interrupções potenciais e obrigações de documentação</td>
+<td>Clínicas, escolas, escritórios, comércios climatizados</td>
+<td>Gestor ou proprietário (orçamento não verificado)</td>
+<td>Contratos recorrentes com inventário, manutenção preventiva, registros, cronograma e PMOC quando aplicável</td>
+<td>Pendente</td>
+<td><strong>G01</strong></td>
+</tr>
+<tr>
+<td>A-OP02</td>
+<td>Higienização programada de reservatórios</td>
+<td>Serviço predial recorrente</td>
+<td>Obrigação de limpeza e manutenção (Lei Distrital 493/1993) em estabelecimentos especificados</td>
+<td>Condomínios e estabelecimentos; síndicos e administradoras</td>
+<td>Condomínio/estabelecimento (orçamento não verificado)</td>
+<td>Serviços periódicos com programação, documentação, inspeção visual e registro fotográfico</td>
+<td>Pendente</td>
+<td><strong>G02</strong></td>
+</tr>
+<tr>
+<td>A-OP03</td>
+<td>Suporte operacional à NFS-e e ao faturamento</td>
+<td>Serviço técnico B2B</td>
+<td>Adaptação operacional à obrigatoriedade do Emissor Nacional de NFS-e (1º/11/2026)</td>
+<td>ME/EPP prestadoras de serviço do Simples Nacional</td>
+<td>Gestores empresariais (orçamento não verificado)</td>
+<td>Configuração de emissores, capacitação, conferência de notas e conciliação, sem substituir funções contábeis</td>
+<td>Pendente</td>
+<td><strong>G03</strong></td>
+</tr>
+<tr>
+<td>A-OP04</td>
+<td>Assistência e capacitação digital para 60+</td>
+<td>Serviço ao público 60+</td>
+<td>Dificuldade de uso de aplicativos</td>
+<td>Parcela da população 60+ com dificuldades digitais</td>
+<td>Pessoa idosa ou familiar (orçamento desconhecido)</td>
+<td>Capacitação e assistência individual. Nunca pedir senhas nem fazer transações</td>
+<td>Pendente</td>
+<td><strong>G04</strong></td>
+</tr>
+<tr>
+<td>A-OP05</td>
+<td>Proteção de dados para pequenas clínicas</td>
+<td>Serviço técnico B2B</td>
+<td>Exposição de dados sensíveis de saúde e ausência de controles</td>
+<td>Clínicas de pequeno porte</td>
+<td>Gestor da clínica (orçamento não verificado)</td>
+<td>Organização de acessos, inventário, treinamento, controles e revisão periódica, com especialistas</td>
+<td>Pendente</td>
+<td><strong>G05</strong></td>
+</tr>
+<tr>
+<td>A-R1</td>
+<td>Aplicativo próprio para conectar cuidadores e idosos</td>
+<td>Plataforma 60+</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Aplicativo</td>
+<td>Rejeitada</td>
+<td><strong>G06</strong></td>
+</tr>
+<tr>
+<td>A-R2</td>
+<td>Loja física de produtos tecnológicos para idosos</td>
+<td>Varejo 60+</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Loja física</td>
+<td>Rejeitada</td>
+<td><strong>G09</strong> (temático)</td>
+</tr>
+<tr>
+<td>A-R3</td>
+<td>Operação própria de atendimento clínico domiciliar</td>
+<td>Saúde domiciliar</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Atendimento domiciliar</td>
+<td>"Rejeitada neste recorte"</td>
+<td>Exclusiva</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2.2 Fonte B (Claude)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome</th>
+<th>Segmento</th>
+<th>Problema</th>
+<th>Cliente</th>
+<th>Pagador</th>
+<th>Solução</th>
+<th>Status (B)</th>
+<th>Grupo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B-OP01 (C01)</td>
+<td>Contratos de PMOC e manutenção de climatização para pequenos estabelecimentos</td>
+<td>B2B técnico</td>
+<td>Falta de plano, registros e responsável técnico: risco de autuação, panes e reclamações</td>
+<td>Clínicas, consultórios, escritórios, academias e escolas pequenas, com 5 a 40 aparelhos</td>
+<td>O estabelecimento, com receita operacional</td>
+<td>Contrato mensal por aparelho: PMOC, ART, limpezas, registros e relatório</td>
+<td><strong>Aprovada</strong></td>
+<td><strong>G01</strong></td>
+</tr>
+<tr>
+<td>B-OP02 (C02)</td>
+<td>Gestão de riscos psicossociais e conformidade com a NR-1 para ME/EPP</td>
+<td>B2B técnico</td>
+<td>Falta de método e de evidência documental; afastamentos</td>
+<td>ME/EPP de serviços com 10 a 99 empregados</td>
+<td>A empresa, com receita operacional</td>
+<td>Diagnóstico, inventário de riscos, plano de ação, acompanhamento trimestral</td>
+<td><strong>Aprovada</strong></td>
+<td>Exclusiva</td>
+</tr>
+<tr>
+<td>B-OP03 (C03)</td>
+<td>Avaliação e adaptação domiciliar para prevenir quedas</td>
+<td>Pessoas 60+ (foco 75+)</td>
+<td>Quedas em casa: fratura, internação, perda de autonomia</td>
+<td>Idoso de 75 anos ou mais</td>
+<td>O idoso (aposentadoria) ou os filhos (renda do trabalho)</td>
+<td>Avaliação com protocolo, instalação e revisão anual</td>
+<td><strong>Aprovada</strong> (confiança baixa; "no limite entre aprovada e pendente")</td>
+<td>Exclusiva</td>
+</tr>
+<tr>
+<td>B-C04</td>
+<td>Apoio digital, administrativo e antigolpe para idosos, por assinatura</td>
+<td>60+</td>
+<td>Dificuldade com aplicativos; estelionato</td>
+<td>Idosos</td>
+<td>Filhos pagadores (implícito no critério de reconsideração)</td>
+<td>Assinatura</td>
+<td>Pendente</td>
+<td><strong>G04</strong></td>
+</tr>
+<tr>
+<td>B-C05</td>
+<td>Agência de cuidadores domiciliares</td>
+<td>60+</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Agência</td>
+<td>Reprovada</td>
+<td><strong>G06</strong></td>
+</tr>
+<tr>
+<td>B-C06</td>
+<td>Centro-dia para idosos</td>
+<td>60+</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Centro-dia com imóvel adaptado e equipe multiprofissional</td>
+<td>Reprovada</td>
+<td><strong>G07</strong> (temático)</td>
+</tr>
+<tr>
+<td>B-C07</td>
+<td>Acompanhamento de idosos a consultas e exames</td>
+<td>60+</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Acompanhamento</td>
+<td>Pendente</td>
+<td><strong>G10</strong> (parcial)</td>
+</tr>
+<tr>
+<td>B-C08</td>
+<td>Refeições para idosos por assinatura</td>
+<td>60+</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Assinatura de refeições</td>
+<td>Pendente</td>
+<td><strong>G08</strong> (temático)</td>
+</tr>
+<tr>
+<td>B-C09</td>
+<td>Higienização de reservatórios de água em condomínios</td>
+<td>Predial</td>
+<td>"Obrigação recorrente"</td>
+<td>Condomínios</td>
+<td>Não detalhado</td>
+<td>Higienização</td>
+<td>Reprovada ("Pode complementar a OP01")</td>
+<td><strong>G02</strong></td>
+</tr>
+<tr>
+<td>B-C10</td>
+<td>Inspeção predial (Lei Distrital 3.684/2005)</td>
+<td>Predial</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Inspeção (exige engenheiro)</td>
+<td>Reprovada</td>
+<td>Exclusiva</td>
+</tr>
+<tr>
+<td>B-C11</td>
+<td>Adequação de MEIs à NFS-e e à reforma tributária</td>
+<td>B2B</td>
+<td>Não detalhado</td>
+<td>MEIs</td>
+<td>Não detalhado</td>
+<td>Adequação</td>
+<td>Reprovada</td>
+<td><strong>G03</strong> (parcial)</td>
+</tr>
+<tr>
+<td>B-C12</td>
+<td>Manutenção e recarga de extintores</td>
+<td>Predial</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Oficina credenciada</td>
+<td>Reprovada</td>
+<td>Exclusiva</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2.3 Fonte C (Copilot)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome</th>
+<th>Segmento</th>
+<th>Problema</th>
+<th>Cliente/pagador (campo único)</th>
+<th>Solução</th>
+<th>Status (C)</th>
+<th>Grupo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C-OP01</td>
+<td>Escola de Inclusão Digital 60+</td>
+<td>Serviços idosos</td>
+<td>Idosos sem acesso a apps bancários e de saúde</td>
+<td>Idosos e famílias</td>
+<td>Cursos práticos presenciais e online</td>
+<td><strong>Aprovada</strong></td>
+<td><strong>G04</strong></td>
+</tr>
+<tr>
+<td>C-OP02</td>
+<td>Centro de Atividades Físicas Adaptadas</td>
+<td>Serviços idosos</td>
+<td>Risco de doenças crônicas e isolamento</td>
+<td>Idosos e familiares</td>
+<td>Pilates, hidroginástica, yoga adaptada</td>
+<td><strong>Aprovada</strong></td>
+<td><strong>G07</strong> (temático)</td>
+</tr>
+<tr>
+<td>C-OP03</td>
+<td>Plataforma de Cuidadores Verificados</td>
+<td>Serviços idosos</td>
+<td>Informalidade e insegurança</td>
+<td>Famílias</td>
+<td>Marketplace com avaliação e pagamento seguro</td>
+<td><strong>Aprovada</strong></td>
+<td><strong>G06</strong></td>
+</tr>
+<tr>
+<td>C-OP04</td>
+<td>Consultoria de Automação para Clínicas</td>
+<td>Serviços técnicos B2B</td>
+<td>Clínicas sem prontuário eletrônico/LGPD</td>
+<td>Clínicas privadas</td>
+<td>Implantação de sistemas e treinamento</td>
+<td><strong>Aprovada</strong></td>
+<td><strong>G05</strong> (parcial)</td>
+</tr>
+<tr>
+<td>C-OP05</td>
+<td>Clube de Assinatura de Produtos Recorrentes 60+</td>
+<td>Comércio recorrente</td>
+<td>Dificuldade de acesso a suplementos e higiene</td>
+<td>Idosos e familiares</td>
+<td>Entrega mensal de kits</td>
+<td><strong>Aprovada</strong></td>
+<td><strong>G08</strong> (temático)</td>
+</tr>
+<tr>
+<td>C-R1</td>
+<td>Loja física de cosméticos naturais</td>
+<td>Varejo</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Loja física</td>
+<td>Rejeitada</td>
+<td><strong>G09</strong> (temático)</td>
+</tr>
+<tr>
+<td>C-R2</td>
+<td>Serviço de transporte exclusivo para idosos</td>
+<td>60+</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Transporte</td>
+<td>Rejeitada</td>
+<td><strong>G10</strong> (parcial)</td>
+</tr>
+<tr>
+<td>C-R3</td>
+<td>Microfranquia de fraldas geriátricas</td>
+<td>60+</td>
+<td>Não detalhado</td>
+<td>Não detalhado</td>
+<td>Microfranquia</td>
+<td>Pendente</td>
+<td>Exclusiva</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2.4 Grupos de equivalência</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Tema</th>
+<th>Membros</th>
+<th>Grau de equivalência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>G01</strong></td>
+<td>PMOC e manutenção de climatização B2B</td>
+<td>A-OP01, B-OP01</td>
+<td><strong>Equivalentes</strong>: mesmo serviço, mesma base legal (Lei 13.589/2018), mesmos tipos de cliente</td>
+</tr>
+<tr>
+<td><strong>G02</strong></td>
+<td>Higienização de reservatórios</td>
+<td>A-OP02, B-C09</td>
+<td><strong>Equivalentes</strong> no serviço. A cita a Lei Distrital 493/1993; B não cita norma para esta candidata</td>
+</tr>
+<tr>
+<td><strong>G03</strong></td>
+<td>Adaptação à NFS-e</td>
+<td>A-OP03, B-C11</td>
+<td><strong>Parcial</strong>: A mira ME/EPP do Simples; B mira <strong>MEIs</strong> e também a reforma tributária</td>
+</tr>
+<tr>
+<td><strong>G04</strong></td>
+<td>Inclusão ou assistência digital 60+</td>
+<td>A-OP04, B-C04, C-OP01</td>
+<td><strong>Parcial a alta</strong>: núcleo comum (dificuldade digital do idoso). Formatos diferentes: aula individual (A), assinatura com foco antigolpe e administrativo (B), escola com cursos (C)</td>
+</tr>
+<tr>
+<td><strong>G05</strong></td>
+<td>Dados e digitalização em clínicas</td>
+<td>A-OP05, C-OP04</td>
+<td><strong>Parcial</strong>: ambas citam LGPD em clínicas. A oferece controles de proteção de dados; C, implantação de prontuário eletrônico e sistemas</td>
+</tr>
+<tr>
+<td><strong>G06</strong></td>
+<td>Intermediação de cuidadores</td>
+<td>A-R1, B-C05, C-OP03</td>
+<td><strong>A-R1 e C-OP03 equivalentes</strong> (app/marketplace). <strong>B-C05 é outro modelo</strong> (agência)</td>
+</tr>
+<tr>
+<td><strong>G07</strong></td>
+<td>Espaço físico de atividades para idosos</td>
+<td>B-C06, C-OP02</td>
+<td><strong>Apenas temático</strong>: centro-dia ≠ centro de atividades físicas</td>
+</tr>
+<tr>
+<td><strong>G08</strong></td>
+<td>Assinatura recorrente para 60+</td>
+<td>B-C08, C-OP05</td>
+<td><strong>Apenas temático</strong>: refeições ≠ kits de suplementos e higiene</td>
+</tr>
+<tr>
+<td><strong>G09</strong></td>
+<td>Varejo físico</td>
+<td>A-R2, C-R1</td>
+<td><strong>Apenas temático</strong>: ambas rejeitadas por investimento ou estoque. Produtos e públicos diferentes</td>
+</tr>
+<tr>
+<td><strong>G10</strong></td>
+<td>Mobilidade e acompanhamento do idoso</td>
+<td>B-C07, C-R2</td>
+<td><strong>Parcial</strong>: B menciona "ambiguidade sobre transporte remunerado"; C trata de transporte exclusivo</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Exclusivas (uma só fonte):</strong> B-OP02, B-OP03, B-C10, B-C12, A-R3, C-R3.</p>
+<hr /></section>
+<section id="s3"><h2>3. Convergências</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Assunto</th>
+<th>Fontes</th>
+<th>As conclusões são compatíveis?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CV1</td>
+<td><strong>PMOC e climatização (G01)</strong> é uma oportunidade relevante, apoiada na Lei 13.589/2018, com recorrência contratual e confiança média</td>
+<td>A, B</td>
+<td><strong>Compatíveis em diagnóstico, não em decisão.</strong> Ambas veem necessidade recorrente, concorrência e dependência de responsável técnico. A deixa pendente; B aprova.</td>
+</tr>
+<tr>
+<td>CV2</td>
+<td><strong>A dificuldade digital dos idosos é um problema documentado</strong></td>
+<td>A, B, C</td>
+<td><strong>Compatíveis quanto ao problema.</strong> A e B citam 48% (IPEDF, Pesquisa de Hábitos 2022), o mesmo dado da mesma origem, portanto não é confirmação independente. C não cita número. <strong>Incompatíveis quanto à decisão</strong> (ver D3).</td>
+</tr>
+<tr>
+<td>CV3</td>
+<td><strong>A disposição de pagar não foi comprovada</strong> e é a principal incerteza</td>
+<td>A, B, C</td>
+<td><strong>Compatíveis.</strong> Formulações nas três fontes: A, "conversão de uma necessidade em contratação paga"; B, "disposição efetiva de pagar no DF"; C, "capacidade de pagamento recorrente das famílias".</td>
+</tr>
+<tr>
+<td>CV4</td>
+<td><strong>O público 60+ total não equivale ao mercado pagante</strong></td>
+<td>A, B</td>
+<td><strong>Compatíveis.</strong> A: "O grupo 60+ total não equivale ao mercado efetivamente disposto a pagar". B: "Eles mostram uma tendência, não uma demanda pagante". C não faz essa ressalva.</td>
+</tr>
+<tr>
+<td>CV5</td>
+<td><strong>O número de empresas não equivale a clientes potenciais</strong></td>
+<td>A, B</td>
+<td><strong>Compatíveis.</strong> A: "Número de empresas no DF não equivale ao mercado elegível". B: "Número de estabelecimentos não equivale a clientes potenciais".</td>
+</tr>
+<tr>
+<td>CV6</td>
+<td><strong>Cuidadores (G06) enfrentam risco regulatório e trabalhista</strong></td>
+<td>A (implícito, via rejeição), B, C</td>
+<td><strong>Parcialmente compatíveis.</strong> B (passivo trabalhista, intermediação de mão de obra) e C ("Risco: regulação trabalhista") reconhecem o mesmo risco, mas C aprova mesmo assim. A rejeita por outro motivo (mercado pagante e aquisição nos dois lados).</td>
+</tr>
+<tr>
+<td>CV7</td>
+<td><strong>Varejo físico com estoque é desaconselhado</strong></td>
+<td>A, C</td>
+<td><strong>Compatíveis no raciocínio</strong> (estoque, investimento, custo fixo), mas sobre produtos diferentes (G09).</td>
+</tr>
+<tr>
+<td>CV8</td>
+<td><strong>Uma vantagem própria (diferencial) é frágil ou replicável</strong> nos serviços técnicos</td>
+<td>A, B</td>
+<td><strong>Compatíveis.</strong> A: "sem teste de diferenciação" e "diferencial não validado". B: "Defensabilidade baixa a média" e "diferencial replicável".</td>
+</tr>
+<tr>
+<td>CV9</td>
+<td><strong>Recomenda-se validar antes de investir</strong></td>
+<td>A, B, C</td>
+<td><strong>Compatíveis em direção, diferentes em rigor.</strong> A: 20 entrevistas e ≥3 pilotos pagos. B: 40 visitas e "não investir mais de 5% do teto antes de concluir a validação". C: "entrevistas com famílias e clínicas locais" e afirma que a falta de dados "não inviabiliza testes-piloto".</td>
+</tr>
+<tr>
+<td>CV10</td>
+<td><strong>Riscos de NR-35 (trabalho em altura)</strong> em serviços prediais e de climatização</td>
+<td>A (para reservatórios, junto com NR-33), B (para climatização)</td>
+<td><strong>Compatíveis</strong>, aplicados a oportunidades diferentes.</td>
+</tr>
+</tbody>
+</table></div>
+<hr /></section>
+<section id="s4"><h2>4. Divergências</h2><figure class="chart"><figcaption><b>Figura 3.</b> Investimento inicial simulado por oportunidade (R$ mil).</figcaption><div class="cbox tall"><canvas id="c2"></canvas></div><p class="note">Valores <b>simulados</b> pelas próprias IAs; não são orçamentos nem dados oficiais. B-C04 não tem valor informado. Teto do recorte: R$ 100 mil.</p></figure>
+<figure class="chart"><figcaption><b>Figura 4.</b> Prazo de retorno informado (meses).</figcaption><div class="cbox tall"><canvas id="c3"></canvas></div><p class="note">Métodos <b>não comparáveis</b>: A = retorno estático (investimento ÷ resultado mensal); B = caixa acumulado volta a zero; C = faixa sem método informado (barra mostra o intervalo).</p></figure>
+<h3>D1. Critério e resultado de aprovação</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aprovadas</td>
+<td>0 de 8</td>
+<td>3 de 12</td>
+<td>5 de 8</td>
+</tr>
+<tr>
+<td>Tratamento da etapa "vendas/CAC" no Dornelas</td>
+<td>Pendente sem CAC real</td>
+<td>Aceita CAC <strong>simulado</strong> ("o CAC se recupera em cerca de 2 meses")</td>
+<td>Não discute ("todas respostas positivas")</td>
+</tr>
+<tr>
+<td>Uso de confiança "alta"</td>
+<td>"Não houve classificação alta"</td>
+<td>Nenhuma alta (média ou baixa)</td>
+<td><strong>Alto</strong> para C-OP01 e C-OP03</td>
+</tr>
+</tbody>
+</table></div>
+<p>A diferença de resultado decorre, ao menos em parte, de critérios diferentes para considerar cumprido o item de vendas e retorno. Esse é um ponto de interpretação a resolver na auditoria humana.</p>
+<h3>D2. G01, PMOC e climatização: números lado a lado (todos simulados)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>A-OP01</th>
+<th>B-OP01</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Investimento inicial</td>
+<td>R$ 70.000</td>
+<td>≈ R$ 98 mil (inclui R$ 40 mil de capital de giro e R$ 35 mil de utilitário usado)</td>
+</tr>
+<tr>
+<td>Ticket</td>
+<td>R$ 550 por contrato/mês</td>
+<td>15 aparelhos × R$ 45 = R$ 675/mês (faixa de hipótese: R$ 35–60 por aparelho)</td>
+</tr>
+<tr>
+<td>Margem de contribuição</td>
+<td>67,3%</td>
+<td>≈ 80%</td>
+</tr>
+<tr>
+<td>Custos fixos</td>
+<td>R$ 6.500/mês</td>
+<td>≈ R$ 12 mil/mês (fase 1); ≈ R$ 16,3 mil/mês (fase 2)</td>
+</tr>
+<tr>
+<td>Ponto de equilíbrio</td>
+<td>18 contratos/mês</td>
+<td>≈ 22 contratos (R$ 15 mil/mês)</td>
+</tr>
+<tr>
+<td>Retorno</td>
+<td>29,4 meses (<strong>estático</strong>: investimento ÷ resultado mensal)</td>
+<td>≈ 29 meses (<strong>caixa acumulado</strong> volta a zero)</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Pendente</td>
+<td>Aprovada, 1º no ranking</td>
+</tr>
+<tr>
+<td>Confiança</td>
+<td>Média</td>
+<td>Média</td>
+</tr>
+<tr>
+<td>Posição na prioridade</td>
+<td>2ª prioridade de validação</td>
+<td>"Mais defensável"</td>
+</tr>
+</tbody>
+</table></div>
+<p>Os prazos de retorno são numericamente próximos, mas foram calculados por métodos diferentes. A coincidência não confirma nenhum dos dois.</p>
+<h3>D3. G04, digital 60+</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>A-OP04</th>
+<th>B-C04</th>
+<th>C-OP01</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status</td>
+<td>Pendente</td>
+<td>Pendente</td>
+<td><strong>Aprovada</strong></td>
+</tr>
+<tr>
+<td>Confiança</td>
+<td>Média</td>
+<td>Não atribuída (pendente)</td>
+<td><strong>Alto</strong></td>
+</tr>
+<tr>
+<td>Investimento</td>
+<td>R$ 28.000</td>
+<td>Não informado</td>
+<td><strong>R$ 80 mil</strong></td>
+</tr>
+<tr>
+<td>Ticket</td>
+<td>R$ 360/plano/mês (2 sessões)</td>
+<td>Não informado</td>
+<td>R$ 200/mês</td>
+</tr>
+<tr>
+<td>Margem</td>
+<td>77,8% (contribuição)</td>
+<td>Não informado</td>
+<td>35% (tipo de margem não especificado)</td>
+</tr>
+<tr>
+<td>Retorno</td>
+<td>11,4 meses (estático)</td>
+<td>Não informado</td>
+<td>18–24 meses</td>
+</tr>
+<tr>
+<td>Riscos</td>
+<td>Privacidade, fraude digital, confiança, baixa renovação</td>
+<td>"alternativas gratuitas, alto risco de confiança e nenhum dado de disposição de pagar"</td>
+<td>"Baixa adesão inicial"</td>
+</tr>
+<tr>
+<td>Ranking</td>
+<td>4ª prioridade de validação</td>
+<td>n/a</td>
+<td>2º no ranking final</td>
+</tr>
+</tbody>
+</table></div>
+<h3>D4. G02, reservatórios</h3>
+<ul>
+<li><strong>A-OP02:</strong> pendente, confiança média, 3ª prioridade. Investimento R$ 58.000, retorno estático de 19,3 meses. "Exigência local concreta"; risco operacional mais alto.</li>
+<li><strong>B-C09:</strong> <strong>reprovada</strong>. "mercado maduro, sem diferenciação, concorrência por preço". Para reconsiderar: "Diferencial defensável". Pode complementar a OP01.</li>
+</ul>
+<h3>D5. G03, NFS-e</h3>
+<ul>
+<li><strong>A-OP03:</strong> pendente, confiança média, <strong>1ª prioridade de validação</strong> e "mais defensável para validação imediata". Investimento R$ 38.000, retorno estático de 9,3 meses. Público: ME/EPP do Simples. A também lista como riscos "Janela de implantação pode ser transitória; contadores e ferramentas gratuitas".</li>
+<li><strong>B-C11:</strong> <strong>reprovada</strong>. "Escritórios contábeis são incumbentes (registro no CRC); janela transitória". Público: <strong>MEIs</strong>.</li>
+<li><strong>Observação:</strong> A e B apontam os mesmos riscos (contadores e janela transitória) e chegam a decisões opostas. Os públicos não são idênticos.</li>
+</ul>
+<h3>D6. G06, cuidadores</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>A-R1</th>
+<th>B-C05</th>
+<th>C-OP03</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modelo</td>
+<td>Aplicativo próprio</td>
+<td>Agência de cuidadores</td>
+<td>Marketplace com avaliação e pagamento seguro</td>
+</tr>
+<tr>
+<td>Decisão</td>
+<td>Rejeitada</td>
+<td>Reprovada</td>
+<td><strong>Aprovada, 1º do ranking, "Mais defensável"</strong></td>
+</tr>
+<tr>
+<td>Motivo/risco</td>
+<td>"Ausência de demonstração de mercado pagante; aquisição dos dois lados da plataforma"</td>
+<td>"Passivo trabalhista, risco de intermediação de mão de obra, margem baixa, concorrência intensa"</td>
+<td>"Risco regulatório" e "regulação trabalhista"</td>
+</tr>
+<tr>
+<td>Números</td>
+<td>—</td>
+<td>Diária de 12 h de R$ 180 a R$ 320 (fonte: "só em blogs comerciais")</td>
+<td>R$ 90 mil; comissão de 15%; margem de 40%; retorno de 12–18 meses</td>
+</tr>
+<tr>
+<td>Confiança</td>
+<td>—</td>
+<td>—</td>
+<td><strong>Alto</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>A posição de C é <strong>minoritária</strong> e contraria os pareceres de A e B. Ela está registrada aqui sem descarte.</p>
+<h3>D7. G05, clínicas</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>A-OP05</th>
+<th>C-OP04</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Foco</td>
+<td>Controles de proteção de dados (LGPD)</td>
+<td>Prontuário eletrônico, sistemas e LGPD</td>
+</tr>
+<tr>
+<td>Status / confiança</td>
+<td>Pendente / <strong>Baixa</strong></td>
+<td><strong>Aprovada</strong> / Médio</td>
+</tr>
+<tr>
+<td>Investimento</td>
+<td>R$ 45.000</td>
+<td>R$ 100 mil</td>
+</tr>
+<tr>
+<td>Receita</td>
+<td>R$ 850 por cliente/mês</td>
+<td>Projetos de R$ 15–30 mil</td>
+</tr>
+<tr>
+<td>Margem</td>
+<td>81,2% (contribuição)</td>
+<td>45%</td>
+</tr>
+<tr>
+<td>Retorno</td>
+<td>11,1 meses (estático)</td>
+<td>12–24 meses</td>
+</tr>
+</tbody>
+</table></div>
+<h3>D8. Espaços físicos para idosos (G07)</h3>
+<ul>
+<li><strong>B-C06 (centro-dia):</strong> reprovada porque "Imóvel adaptado e equipe multiprofissional excedem R$ 100 mil e três pessoas".</li>
+<li><strong>C-OP02 (atividades físicas adaptadas):</strong> aprovada, com investimento de R$ 100 mil (no teto), mensalidade de R$ 250, margem de 30% e retorno de 24–30 meses.</li>
+<li>Não são o mesmo negócio. A divergência é sobre a viabilidade de estruturas físicas para o público 60+ dentro do teto.</li>
+</ul>
+<h3>D9. Dados de contexto</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Dado</th>
+<th>A</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>População 60+ no DF</td>
+<td><strong>523 mil</strong> (IPEDF/DIEESE, PED-DF, biênio 2023–2024)</td>
+<td><strong>365.090</strong> (Censo 2022, via IPEDF; "valores obtidos de resumo de busca"); 13,5% de idosos estimados em 2024</td>
+</tr>
+<tr>
+<td>Universo de empresas</td>
+<td><strong>431.090 empresas ativas</strong> (Jucis-DF, 1º/07/2025)</td>
+<td><strong>130.039 ME e 23.529 EPP</strong> (Sedet-DF, secundária, sem data); outra reportagem cita <strong>247.878 microempresas ativas</strong> (B registra o conflito)</td>
+</tr>
+</tbody>
+</table></div>
+<p>As bases, os anos e as definições diferem. Sem verificação externa, não é possível dizer qual número é adequado: <strong>evidência insuficiente</strong> para conciliar.</p>
+<h3>D10. Horizonte e janela</h3>
+<ul>
+<li>A: a janela da NFS-e tem data concreta (1º/11/2026); para PMOC, "obrigação legal não surgiu em 2026".</li>
+<li>B: a janela da NR-1 está "aberta agora, com risco de se estreitar até 2028"; para PMOC, o "agora" depende de fiscalização "não comprovad[a] para o DF".</li>
+<li>C: não discute horizonte ou janela de forma explícita.</li>
+</ul>
+<hr /></section>
+<section id="s5"><h2>5. Comparação pela régua das aulas</h2>
+<p>Legenda: <strong>S</strong> = Sustentada; <strong>P</strong> = Parcialmente sustentada; <strong>—</strong> = não informado pela fonte. O conteúdo ausente <strong>não</strong> foi completado.</p>
+<h3>5.1 Cinco perguntas da Aula 4</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Oportunidade</th>
+<th>Quem tem o problema?</th>
+<th>Quanto dói?</th>
+<th>Quem paga?</th>
+<th>Por que este fornecedor?</th>
+<th>Por que agora?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-OP01 (G01)</td>
+<td>S</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr>
+<td>B-OP01 (G01)</td>
+<td>S</td>
+<td>P</td>
+<td>S</td>
+<td>S, "defensabilidade limitada"</td>
+<td>P</td>
+</tr>
+<tr>
+<td>A-OP02 (G02)</td>
+<td>S</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr>
+<td>A-OP03 (G03)</td>
+<td>S</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td><strong>S</strong> (marco de nov./2026)</td>
+</tr>
+<tr>
+<td>A-OP04 (G04)</td>
+<td>S</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr>
+<td>A-OP05 (G05)</td>
+<td>S</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr>
+<td>B-OP02</td>
+<td>P</td>
+<td>P</td>
+<td>S</td>
+<td>S, "defensabilidade temporária"</td>
+<td>S</td>
+</tr>
+<tr>
+<td>B-OP03</td>
+<td>P</td>
+<td>S "quanto ao problema"</td>
+<td>P</td>
+<td>P</td>
+<td>S</td>
+</tr>
+<tr>
+<td>C-OP01 a C-OP05</td>
+<td>Apenas "problema sustentado"</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>Nota sobre B-OP01: o quadro comparativo de B informa "4 sustentadas, 1 parcial", mas a tabela de triagem da própria ficha mostra 3 S e 2 P. É uma <strong>inconsistência interna da Fonte B</strong> a verificar.</p>
+<h3>5.2 Checklist de Dornelas (Aula 5)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Oportunidade</th>
+<th>Problema</th>
+<th>Solução</th>
+<th>Clientes identificáveis</th>
+<th>Vendas/retorno</th>
+<th>Janela</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-OP01</td>
+<td>Sim</td>
+<td>Sim, mediante qualificação</td>
+<td>Sim</td>
+<td><strong>Pendente</strong></td>
+<td>Sim (mercado recorrente)</td>
+<td>Pendente</td>
+</tr>
+<tr>
+<td>B-OP01</td>
+<td>Sim (obrigação com sanção)</td>
+<td>Sim</td>
+<td>Sim (CNAE, CNES, prospecção)</td>
+<td>Sim (CAC simulado recuperado em ≈2 meses)</td>
+<td>Sim</td>
+<td><strong>Aprovada</strong></td>
+</tr>
+<tr>
+<td>A-OP02</td>
+<td>Sim</td>
+<td>Sim, condicionada à segurança</td>
+<td>Sim</td>
+<td>Pendente</td>
+<td>Sim</td>
+<td>Pendente</td>
+</tr>
+<tr>
+<td>A-OP03</td>
+<td>Sim</td>
+<td>Sim</td>
+<td>Sim</td>
+<td>Pendente</td>
+<td>Sim, data concreta</td>
+<td>Pendente</td>
+</tr>
+<tr>
+<td>A-OP04</td>
+<td>Sim</td>
+<td>Plausível</td>
+<td>Sim</td>
+<td>Pendente</td>
+<td>Plausível</td>
+<td>Pendente</td>
+</tr>
+<tr>
+<td>A-OP05</td>
+<td>Sim</td>
+<td>Plausível com especialistas</td>
+<td>Sim</td>
+<td>Pendente</td>
+<td>Plausível</td>
+<td>Pendente</td>
+</tr>
+<tr>
+<td>B-OP02</td>
+<td>Sim (obrigação nova)</td>
+<td>Sim (COPSOQ; "verificar licença")</td>
+<td>Sim</td>
+<td>Sim (CAC simulado em 3 a 5 meses)</td>
+<td>Aberta, pode estreitar até 2028</td>
+<td><strong>Aprovada</strong></td>
+</tr>
+<tr>
+<td>B-OP03</td>
+<td>Sim</td>
+<td>Sim (Cochrane, "não verificada nesta sessão")</td>
+<td>Sim, "de forma aproximada"</td>
+<td>Exequível por indicação</td>
+<td>Aberta</td>
+<td><strong>Aprovada (confiança baixa)</strong></td>
+</tr>
+<tr>
+<td>C-OP01 a C-OP05</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>"todas respostas positivas" / "positivo"</td>
+</tr>
+</tbody>
+</table></div>
+<h3>5.3 Metodologia dos 3Ms</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Oportunidade</th>
+<th>M1, demanda</th>
+<th>M2, tamanho e estrutura</th>
+<th>M3, margem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-OP01</td>
+<td>CAC e disposição de pagar não observados</td>
+<td>Mercado maduro; concorrentes a mapear</td>
+<td>Contribuição de 67,3% (simulada)</td>
+</tr>
+<tr>
+<td>B-OP01</td>
+<td>Disposição de pagar "inferida da obrigação legal, não observada"; CAC simulado de R$ 800</td>
+<td>Sem base pública de estabelecimentos climatizados; proxy de ME/EPP com conflito de fontes</td>
+<td>≈80% (simulada)</td>
+</tr>
+<tr>
+<td>A-OP02</td>
+<td>Renovação e frequência a medir</td>
+<td>Concorrência não quantificada</td>
+<td>66,7% (simulada)</td>
+</tr>
+<tr>
+<td>A-OP03</td>
+<td>Disposição a terceirizar a comprovar</td>
+<td>Contadores, softwares, ferramentas gratuitas</td>
+<td>82,2% (simulada)</td>
+</tr>
+<tr>
+<td>A-OP04</td>
+<td>Recorrência incerta</td>
+<td>Substitutos gratuitos; 60+ ≠ mercado pagante</td>
+<td>77,8% (simulada)</td>
+</tr>
+<tr>
+<td>A-OP05</td>
+<td>Sem CAC nem contratação comprovados</td>
+<td>Mercado acessível não quantificado</td>
+<td>81,2% (simulada)</td>
+</tr>
+<tr>
+<td>B-OP02</td>
+<td>Disposição de pagar não observada; depende de fiscalização</td>
+<td>Fração de empresas com ≥10 empregados desconhecida</td>
+<td>≈75% (simulada)</td>
+</tr>
+<tr>
+<td>B-OP03</td>
+<td>Recorrência baixa; sem evidência local de pagamento</td>
+<td>365 mil idosos (2022), mercado acessível "muito menor"</td>
+<td>≈54% (simulada)</td>
+</tr>
+<tr>
+<td>C-OP01</td>
+<td>"demanda crescente"</td>
+<td>"mercado fragmentado"</td>
+<td>35%</td>
+</tr>
+<tr>
+<td>C-OP02</td>
+<td>—</td>
+<td>"mercado maduro, concorrência com academias"</td>
+<td>30% (no quadro B de C)</td>
+</tr>
+<tr>
+<td>C-OP03</td>
+<td>"demanda clara"</td>
+<td>"mercado emergente"</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>C-OP04</td>
+<td>—</td>
+<td>"mercado fragmentado"</td>
+<td>45%</td>
+</tr>
+<tr>
+<td>C-OP05</td>
+<td>—</td>
+<td>"mercado recorrente"</td>
+<td>25%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Em C, a fonte não explica a base de cálculo das margens.</p>
+<h3>5.4 Modelo de negócio e monetização (Aula 6)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Oportunidade</th>
+<th>Quem paga</th>
+<th>Forma de cobrança</th>
+<th>Componente digital</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-OP01</td>
+<td>Empresa</td>
+<td>Mensalidade contratual</td>
+<td>Não aplicável como fonte principal (portal de apoio)</td>
+</tr>
+<tr>
+<td>B-OP01</td>
+<td>Estabelecimento</td>
+<td>Boleto/PIX recorrente, contrato de 12 meses, por aparelho</td>
+<td>Sistema interno com QR code; "não é fonte de receita"</td>
+</tr>
+<tr>
+<td>A-OP02</td>
+<td>Condomínio/estabelecimento</td>
+<td>Por execução e programação periódica</td>
+<td>Não aplicável</td>
+</tr>
+<tr>
+<td>A-OP03</td>
+<td>Empresa</td>
+<td>Assinatura/pacote</td>
+<td>Instrumental</td>
+</tr>
+<tr>
+<td>A-OP04</td>
+<td>Idoso ou familiar</td>
+<td>Por aula ou plano mensal</td>
+<td>Não aplicável como negócio principal</td>
+</tr>
+<tr>
+<td>A-OP05</td>
+<td>Clínica</td>
+<td>Mensalidade ou pacote de implantação</td>
+<td>Só se houver software próprio</td>
+</tr>
+<tr>
+<td>B-OP02</td>
+<td>Empresa</td>
+<td>Implantação (R$ 3–8 mil) + mensalidade (R$ 300–900), contrato anual</td>
+<td>Plataforma interna; "pode virar SaaS, mas isso não é premissa"</td>
+</tr>
+<tr>
+<td>B-OP03</td>
+<td>Idoso ou família</td>
+<td>Sinal + saldo, parcelável no cartão</td>
+<td>Não aplicável</td>
+</tr>
+<tr>
+<td>C-OP01</td>
+<td>Idosos e famílias</td>
+<td>Mensalidade recorrente</td>
+<td>—</td>
+</tr>
+<tr>
+<td>C-OP02</td>
+<td>Idosos e familiares</td>
+<td>Mensalidade</td>
+<td>—</td>
+</tr>
+<tr>
+<td>C-OP03</td>
+<td>Famílias</td>
+<td>Comissão sobre transações (15%)</td>
+<td>Marketplace (plataforma)</td>
+</tr>
+<tr>
+<td>C-OP04</td>
+<td>Clínicas privadas</td>
+<td>Projetos + manutenção</td>
+<td>—</td>
+</tr>
+<tr>
+<td>C-OP05</td>
+<td>Idosos e familiares</td>
+<td>Assinatura mensal</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Timmons:</strong> A e B aplicam o critério de forma qualitativa em todas as fichas. C atribui potencial ("alto", "médio") sem justificativa detalhada, exceto em C-OP01 ("baixo capital, barreira cultural").</p>
+<hr /></section>
+<section id="s6"><h2>6. Oportunidades mais promissoras para investigação adicional</h2>
+<p>A seleção usa apenas os argumentos das próprias fontes. <strong>Nenhuma delas é declarada viável.</strong> Recomendação por mais de uma IA não equivale a validação.</p>
+<h3>1. G01: PMOC e manutenção de climatização (A-OP01, B-OP01)</h3>
+<ul>
+<li><strong>Justificativas de A:</strong> "Necessidade técnica recorrente e mercado contratual existente, apesar da concorrência" (2ª prioridade de validação).</li>
+<li><strong>Justificativas de B:</strong> "O pagamento decorre de lei em vigor desde 2018 e a receita é contratual e recorrente"; "Mais defensável".</li>
+<li><strong>Ressalvas das próprias fontes:</strong></li>
+<li>B: a fiscalização no DF é desconhecida; a necessidade de caixa fica "muito perto do teto".</li>
+<li>A: "Responsável técnico, habilitação, capacidade de atendimento".</li>
+<li><strong>Por que investigar:</strong> é o único caso de duas fontes com tratamento equivalente e confiança média em ambas. A divergência entre os números simulados (D2) precisa ser resolvida.</li>
+</ul>
+<h3>2. G04: Assistência e inclusão digital 60+ (A-OP04, B-C04, C-OP01)</h3>
+<ul>
+<li><strong>Justificativas de A:</strong> "Problema local documentado e piloto de baixo custo; monetização incerta".</li>
+<li><strong>Justificativas de B:</strong> "Problema forte", com o dado de 48% e o dado de estelionato da FBSP (secundária).</li>
+<li><strong>Justificativas de C:</strong> aprovada, confiança "Alto", 2º no ranking.</li>
+<li><strong>Ressalvas:</strong> A e B mantêm como pendente por falta de disposição de pagar. A fundamentação de C não é detalhada. O dado de 48% vem de uma única origem.</li>
+<li><strong>Por que investigar:</strong> é o único tema presente nas três fontes, e a divergência de status e de investimento (R$ 28 mil vs. R$ 80 mil) pede verificação.</li>
+</ul>
+<h3>3. G03: Suporte à NFS-e e ao faturamento (A-OP03), com o contraponto de B-C11</h3>
+<ul>
+<li><strong>Justificativas de A:</strong> "Marco específico de 2026, menor capital e facilidade de teste comercial"; 1ª prioridade de validação.</li>
+<li><strong>Contraponto de B:</strong> reprovada por "Escritórios contábeis são incumbentes (registro no CRC); janela transitória", embora para MEIs.</li>
+<li><strong>Por que investigar:</strong> tem a janela mais concreta entre os documentos (data de 1º/11/2026, segundo A) e a menor necessidade de capital simulada (R$ 38 mil). A posição contrária de B e a diferença de público tornam o caso decisivo para testar.</li>
+</ul>
+<p><strong>Candidatas sustentadas por uma única fonte e não selecionadas:</strong></p>
+<ul>
+<li><strong>B-OP02 (NR-1 psicossocial):</strong> aprovada por B, com menor exposição financeira entre as aprovadas de B (≈ R$ 70 mil). Não aparece em A nem em C.</li>
+<li><strong>C-OP03 (cuidadores):</strong> 1ª de C, mas rejeitada nos formatos analisados por A e por B.</li>
+</ul>
+<hr /></section>
+<section id="s7"><h2>7. Lacunas e discordâncias não resolvidas</h2>
+<p>Pontos que exigem verificação humana ou consulta a fontes primárias:</p>
+<ol>
+<li><strong>População 60+ no DF:</strong> 523 mil (A, PED-DF 2023–2024) vs. 365.090 (B, Censo 2022, via resumo de busca). Confirmar bases e definições.</li>
+<li><strong>Universo de empresas no DF:</strong> 431.090 ativas (A, Jucis-DF) vs. 130.039 ME + 23.529 EPP vs. 247.878 microempresas (B, secundárias).</li>
+<li><strong>Data e alcance da obrigatoriedade da NFS-e nacional</strong> (1º/11/2026 para ME/EPP do Simples, segundo A) e sua aplicação a MEIs (público de B-C11).</li>
+<li><strong>Vigência do capítulo 1.5 da NR-1 (26/05/2026) e do manual do MTE (16/03/2026)</strong> (B). B marca a Portaria MTE 1.419/2024 como "[não verificada nesta sessão]".</li>
+<li><strong>Normas que B marca como não verificadas:</strong> Portaria MS 3.523/1998, RE Anvisa 9/2003, RDC Anvisa 502/2021 e a revisão Cochrane (Gillespie et al., 2012).</li>
+<li><strong>Lei Distrital 493/1993:</strong> abrangência e periodicidade. A afirma que "não estabelece, por si só, periodicidade semestral universal".</li>
+<li><strong>Intensidade de fiscalização sanitária e trabalhista no DF</strong> (autuações por ano): B diz que não encontrou dados públicos.</li>
+<li><strong>Preços praticados pelos concorrentes</strong> em todas as oportunidades: as três fontes os tratam como desconhecidos ou hipotéticos.</li>
+<li><strong>Disposição de pagar e CAC reais:</strong> nenhuma fonte observou.</li>
+<li><strong>Origem dos números de C</strong> (investimentos, tickets, margens, retornos): sem referência rastreável. As fontes citadas são apenas "Sebrae-DF" e "O Globo". <strong>Evidência insuficiente.</strong></li>
+<li><strong>Viabilidade jurídica de plataformas ou agências de cuidadores</strong> (G06): conflito entre C e A/B.</li>
+<li><strong>Dados de quedas de idosos:</strong> B registra "87.895 atendimentos hospitalares" vs. "mais de 344 mil atendimentos e internações" em 2024, sem conciliação metodológica.</li>
+<li><strong>Estelionato no DF</strong> (1.717 por 100 mil hab., FBSP 2026): citado por B como secundário.</li>
+<li><strong>Inconsistências internas a verificar:</strong><ul>
+<li>B-OP01: contagem de triagem "4 S / 1 P" vs. 3 S / 2 P na ficha.</li>
+<li>B-C12: o texto cita o "Decreto 21.361/2000", mas a lista de fontes da Parte D traz o "Decreto 23.154/2002".</li>
+<li>C-OP05: o risco é "Endividamento das famílias" no quadro e "inadimplência" na ficha.</li>
+</ul>
+</li>
+<li><strong>Referência sem URL:</strong> A-[11] ("sem URL estável no resultado consolidado").</li>
+<li><strong>Divergência metodológica no retorno:</strong> A usa retorno estático; B usa caixa acumulado; C não informa o método. Os prazos não são comparáveis entre si.</li>
+</ol>
+<hr /></section>
+<section id="s8"><h2>8. Matriz de rastreabilidade</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Afirmação na síntese</th>
+<th>Origem</th>
+<th>Trecho original que a sustenta</th>
+<th>Concordância / conflito</th>
+<th>Ressalvas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R01</td>
+<td>A Fonte A não aprovou nenhuma das 8 candidatas</td>
+<td>A</td>
+<td>"Examinadas 8 / Aprovadas 0 / Pendentes 5 / Rejeitadas 3"</td>
+<td>Conflita com B (3 aprovadas) e C (5 aprovadas)</td>
+<td>Resultado depende do critério adotado para CAC</td>
+</tr>
+<tr>
+<td>R02</td>
+<td>B aprovou 3 das 12 candidatas e não completou as cinco vagas</td>
+<td>B</td>
+<td>"Apenas três candidatas passaram nos cinco itens do checklist de Dornelas. As cinco vagas não foram completadas"</td>
+<td>Conflita com A e C</td>
+<td>Aprovação baseada em CAC simulado</td>
+</tr>
+<tr>
+<td>R03</td>
+<td>C aprovou 5 das 8 candidatas</td>
+<td>C</td>
+<td>"Candidatas examinadas: 8 / Aprovadas: 5 / Rejeitadas: 2 / Pendentes de validação: 1"</td>
+<td>Conflita com A e B</td>
+<td>Checklist sem detalhamento ("todas respostas positivas")</td>
+</tr>
+<tr>
+<td>R04</td>
+<td>PMOC e climatização é tratado de forma equivalente por A e B, com confiança média</td>
+<td>A, B</td>
+<td>A: "OP01 | Manutenção profissional… | Média"; B: "Média: obrigação legal verificada; fiscalização no DF desconhecida"</td>
+<td><strong>Concordância</strong> na confiança; <strong>conflito</strong> no status</td>
+<td>Ambas se apoiam na mesma lei; não são validações independentes</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>O investimento simulado do PMOC é de R$ 70.000 em A e ≈ R$ 98 mil em B</td>
+<td>A, B</td>
+<td>A: "OP01 … R$ 70.000"; B: "Total | ≈ R$ 98 mil"</td>
+<td><strong>Conflito</strong></td>
+<td>Ambos são simulações; composições diferentes (B inclui utilitário e capital de giro)</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>48% dos idosos do DF relatam dificuldade com aplicativos</td>
+<td>A, B</td>
+<td>A: "48% dos entrevistados 60+ com dificuldade em aplicativos"; B: "48% relataram dificuldade para usar aplicativos de serviços públicos e privados"</td>
+<td><strong>Concordância</strong>, mas mesma origem (IPEDF, Pesquisa de Hábitos 2022)</td>
+<td>Repetição ≠ validação independente; não mede disposição de pagar</td>
+</tr>
+<tr>
+<td>R07</td>
+<td>A população 60+ do DF é estimada de forma diferente</td>
+<td>A, B</td>
+<td>A: "523 mil pessoas com 60+ no DF"; B: "passou de 198.012 para 365.090 pessoas"</td>
+<td><strong>Conflito</strong> (bases e anos diferentes)</td>
+<td>B indica "valores obtidos de resumo de busca"</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Digital 60+ é pendente em A e B e aprovado com confiança alta em C</td>
+<td>A, B, C</td>
+<td>A: "OP04 … Pendente"; B: "C04 … Pendente"; C: "OP01 … Aprovada | Alto"</td>
+<td><strong>Conflito</strong> de status</td>
+<td>C não apresenta fundamentação detalhada</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>Cuidadores: C aprova e coloca em 1º; A e B rejeitam formatos próximos</td>
+<td>A, B, C</td>
+<td>C: "Mais defensável: OP03 (Plataforma de Cuidadores)"; A: "Aplicativo próprio para conectar cuidadores e idosos | Rejeitada"; B: "C05 | Agência de cuidadores domiciliares | Reprovada"</td>
+<td><strong>Conflito</strong> forte</td>
+<td>B-C05 é modelo diferente (agência); A-R1 e C-OP03 são próximos</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>A coloca a NFS-e como 1ª prioridade de validação; B reprova a adequação de MEIs à NFS-e</td>
+<td>A, B</td>
+<td>A: "1 | OP03 — NFS-e e faturamento | Marco específico de 2026"; B: "C11 | Adequação de MEIs à NFS-e… | Reprovada"</td>
+<td><strong>Conflito</strong> parcial</td>
+<td>Públicos diferentes (ME/EPP vs. MEI)</td>
+</tr>
+<tr>
+<td>R11</td>
+<td>Reservatórios: pendente em A, reprovado em B</td>
+<td>A, B</td>
+<td>A: "OP02 | Higienização de reservatórios… | Pendente"; B: "C09 | … | Reprovada | … mercado maduro, sem diferenciação"</td>
+<td><strong>Conflito</strong></td>
+<td>A cita a norma distrital; B não cita norma para C09</td>
+</tr>
+<tr>
+<td>R12</td>
+<td>Nenhuma fonte observou disposição de pagar em campo</td>
+<td>A, B, C</td>
+<td>A: "Não realizou entrevistas…"; B: "nenhuma disposição de pagar foi observada diretamente"; C: "Dados faltantes: ticket médio real no DF, taxa de adesão inicial"</td>
+<td><strong>Concordância</strong></td>
+<td>Em C, a ausência é inferida pelos dados faltantes declarados, não por nota de método</td>
+</tr>
+<tr>
+<td>R13</td>
+<td>Os valores financeiros de A e B são simulações próprias</td>
+<td>A, B</td>
+<td>A: "As estimativas de investimento, preço, custo e receita são simulações próprias"; B: "Preços, custos… são simulações próprias, não estatísticas oficiais"</td>
+<td><strong>Concordância</strong> entre A e B</td>
+<td>C não qualifica a natureza dos seus números</td>
+</tr>
+<tr>
+<td>R14</td>
+<td>Na sensibilidade de A, todas as cinco candidatas têm prejuízo a 50% do volume-base</td>
+<td>A</td>
+<td>"todas as cinco candidatas registram prejuízo operacional ao alcançar apenas metade do volume-base"</td>
+<td>Exclusiva de A</td>
+<td>B traz sensibilidade só para B-OP03 ("Com 4 projetos/mês o negócio não se sustenta")</td>
+</tr>
+<tr>
+<td>R15</td>
+<td>Para B, as aprovadas mais confiáveis são B2B com pagamento induzido por obrigação legal</td>
+<td>B</td>
+<td>"as duas aprovadas com maior confiança são B2B e têm um mecanismo de pagamento criado por obrigação legal"</td>
+<td>Compatível com o perfil de A (pendentes técnicas B2B com base legal); <strong>diverge</strong> do perfil de C (foco 60+)</td>
+<td>Interpretação da própria B</td>
+</tr>
+<tr>
+<td>R16</td>
+<td>B recomenda não investir mais de 5% do teto antes da validação</td>
+<td>B</td>
+<td>"Recomenda-se não investir mais de 5% do teto antes de concluir a validação de campo"</td>
+<td>Exclusiva de B; A tem posição próxima ("impede uma decisão definitiva de investimento")</td>
+<td>Recomendação, não dado</td>
+</tr>
+<tr>
+<td>R17</td>
+<td>C cita apenas "Sebrae-DF" e "O Globo" como fontes, sem links</td>
+<td>C</td>
+<td>Coluna "Fontes": "Sebrae-DF" (OP01–OP04), "O Globo" (OP05)</td>
+<td>—</td>
+<td>Evidência insuficiente para rastrear os números de C</td>
+</tr>
+<tr>
+<td>R18</td>
+<td>B registra inconsistência entre a contagem de triagem do quadro e a da ficha da OP01</td>
+<td>B</td>
+<td>Quadro: "4 sustentadas, 1 parcial / 5 de 5"; a ficha mostra duas linhas "Parcialmente sustentada"</td>
+<td>Inconsistência interna</td>
+<td>Constatação desta síntese a partir do próprio texto de B</td>
+</tr>
+</tbody>
+</table></div>
+<hr /></section>
+<section id="s9"><h2>9. Conclusão descritiva</h2>
+<p>Em conjunto, as três respostas sugerem que, no recorte (DF, até R$ 100 mil, horizonte 2026–2030), as hipóteses com <strong>fundamentação documental mais detalhada</strong> são serviços técnicos B2B ligados a obrigações legais. A PMOC e climatização é o caso em que duas fontes (A e B) convergem de forma clara. As duas fontes que trazem método explícito (A e B) também concordam em três pontos: o <strong>público 60+ tem um problema documentado</strong>, a <strong>disposição de pagar não está demonstrada</strong> e a tendência demográfica não deve ser confundida com mercado pagante.</p>
+<p>O quadro geral, porém, é de <strong>baixa convergência de decisões</strong>. A mesma ideia recebe status opostos conforme a fonte: reservatórios, NFS-e, digital 60+ e cuidadores. Os números financeiros variam bastante e todos são simulados. As fontes também diferem muito em rigor: A e B explicitam premissas, fórmulas e graus de verificação; C apresenta classificações e confianças mais altas sem fundamentação rastreável. A <strong>coincidência entre fontes não constitui validação</strong>, porque todas partiram do mesmo prompt e, em parte, dos mesmos dados.</p>
+<p><strong>Continuam incertos:</strong></p>
+<ul>
+<li>a disposição de pagar e o CAC reais em todas as oportunidades;</li>
+<li>a intensidade de fiscalização no DF, que é o mecanismo de pagamento das hipóteses B2B;</li>
+<li>os dados de contexto conflitantes (população 60+ e universo de empresas);</li>
+<li>a vigência e o alcance das normas citadas;</li>
+<li>a origem dos números da Fonte C;</li>
+<li>a viabilidade jurídica dos modelos de intermediação de cuidadores.</li>
+</ul>
+<p>Essas questões só podem ser resolvidas na etapa de auditoria em fontes primárias e na validação de campo, que estão fora do escopo desta síntese.</p></section>
+  </main>
+</div>
+<footer>Síntese elaborada exclusivamente a partir dos três documentos recebidos. Sem dados pessoais de terceiros.</footer>
+<script>
+(function(){
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const A=css('--a'),B=css('--b'),C=css('--c'),ink=css('--ink'),muted=css('--muted'),line=css('--line');
+  const OK=css('--ok'),PEND=css('--pend'),REJ=css('--rej');
+  if(window.Chart){
+    Chart.defaults.font.family='Inter,system-ui,sans-serif';
+    Chart.defaults.color=muted; Chart.defaults.borderColor=line;
+    const sc={grid:{color:line},ticks:{color:muted}};
+    // Fig 1
+    new Chart(document.getElementById('c1'),{type:'bar',
+      data:{labels:['A · ChatGPT','B · Claude','C · Copilot'],datasets:[
+        {label:'Aprovadas',data:[0,3,5],backgroundColor:OK},
+        {label:'Pendentes',data:[5,3,1],backgroundColor:PEND},
+        {label:'Rejeitadas',data:[3,6,2],backgroundColor:REJ}]},
+      options:{maintainAspectRatio:false,indexAxis:'y',layout:{padding:{left:8}},scales:{x:{...sc,stacked:true,title:{display:true,text:'nº de candidatas',color:muted}},y:{...sc,stacked:true}},
+        plugins:{legend:{labels:{color:ink}}}}});
+    // Fig 3 investment
+    const inv=[['A-OP01 PMOC (G01)',70,'A'],['B-OP01 PMOC (G01)',98,'B'],['A-OP02 Reservatórios (G02)',58,'A'],['A-OP03 NFS-e (G03)',38,'A'],
+      ['A-OP04 Digital 60+ (G04)',28,'A'],['C-OP01 Digital 60+ (G04)',80,'C'],['A-OP05 Clínicas (G05)',45,'A'],['C-OP04 Clínicas (G05)',100,'C'],
+      ['C-OP03 Cuidadores (G06)',90,'C'],['C-OP02 Ativ. físicas (G07)',100,'C'],['C-OP05 Assinatura 60+ (G08)',70,'C'],['B-OP02 NR-1 psicossocial',70,'B'],['B-OP03 Quedas',97,'B']];
+    const col={A,B,C};
+    new Chart(document.getElementById('c2'),{type:'bar',
+      data:{labels:inv.map(r=>r[0]),datasets:[{label:'R$ mil',data:inv.map(r=>r[1]),backgroundColor:inv.map(r=>col[r[2]])}]},
+      options:{maintainAspectRatio:false,indexAxis:'y',layout:{padding:{left:8}},scales:{x:{...sc,max:110,title:{display:true,text:'R$ mil (simulado)',color:muted}},y:sc},
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'R$ '+c.raw+' mil'}}}}});
+    // Fig 4 payback (ranges)
+    const pb=[['A-OP01 PMOC',[29.4,29.4],'A'],['B-OP01 PMOC',[29,29],'B'],['A-OP02 Reservatórios',[19.3,19.3],'A'],['A-OP03 NFS-e',[9.3,9.3],'A'],
+      ['A-OP04 Digital 60+',[11.4,11.4],'A'],['C-OP01 Digital 60+',[18,24],'C'],['A-OP05 Clínicas',[11.1,11.1],'A'],['C-OP04 Clínicas',[12,24],'C'],
+      ['C-OP03 Cuidadores',[12,18],'C'],['C-OP02 Ativ. físicas',[24,30],'C'],['C-OP05 Assinatura 60+',[18,24],'C'],['B-OP02 NR-1',[23,23],'B'],['B-OP03 Quedas',[27,27],'B']];
+    new Chart(document.getElementById('c3'),{type:'bar',
+      data:{labels:pb.map(r=>r[0]),datasets:[{label:'meses',data:pb.map(r=>r[1][0]===r[1][1]?[0,r[1][0]]:r[1]),backgroundColor:pb.map(r=>col[r[2]]),borderSkipped:false}]},
+      options:{maintainAspectRatio:false,indexAxis:'y',layout:{padding:{left:8}},scales:{x:{...sc,min:0,max:32,title:{display:true,text:'meses',color:muted}},y:sc},
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const r=pb[c.dataIndex][1];return r[0]===r[1]?r[0]+' meses':r[0]+'–'+r[1]+' meses';}}}}}});
+    // legends for source colors
+    ['c2','c3'].forEach(id=>{const f=document.getElementById(id).closest('figure');
+      const l=document.createElement('div');l.className='legend';
+      l.innerHTML=`<span><i style="background:${A}"></i>A · ChatGPT</span><span><i style="background:${B}"></i>B · Claude</span><span><i style="background:${C}"></i>C · Copilot</span>`;
+      f.querySelector('.cbox').after(l);});
+  }
+  // Fig 2 matrix
+  const S={ok:'Aprovada',pend:'Pendente',rej:'Rejeitada'};
+  const chip=(k,t)=>k?`<span class="chip ${k}">${t||S[k]}</span>`:'';
+  const rows=[
+    ['G01 PMOC / climatização',['pend','A-OP01'],['ok','B-OP01'],null],
+    ['G02 Reservatórios',['pend','A-OP02'],['rej','B-C09'],null],
+    ['G03 NFS-e',['pend','A-OP03'],['rej','B-C11'],null],
+    ['G04 Digital 60+',['pend','A-OP04'],['pend','B-C04'],['ok','C-OP01']],
+    ['G05 Dados / digitalização em clínicas',['pend','A-OP05'],null,['ok','C-OP04']],
+    ['G06 Cuidadores',['rej','A-R1'],['rej','B-C05'],['ok','C-OP03']],
+    ['G07 Espaço físico para idosos',null,['rej','B-C06'],['ok','C-OP02']],
+    ['G08 Assinatura para 60+',null,['pend','B-C08'],['ok','C-OP05']],
+    ['G09 Varejo físico',['rej','A-R2'],null,['rej','C-R1']],
+    ['G10 Mobilidade / acompanhamento',null,['pend','B-C07'],['rej','C-R2']],
+  ];
+  const cell=c=>c?`${chip(c[0])}<br><small>${c[1]}</small>`:'';
+  const m=document.getElementById('matrix');
+  if(m) m.innerHTML='<div class="tw"><table><thead><tr><th>Grupo</th><th>A · ChatGPT</th><th>B · Claude</th><th>C · Copilot</th></tr></thead><tbody>'+
+    rows.map(r=>`<tr><td>${r[0]}</td><td>${cell(r[1])}</td><td>${cell(r[2])}</td><td>${cell(r[3])}</td></tr>`).join('')+'</tbody></table></div>';
+  // active toc
+  const links=[...document.querySelectorAll('nav.toc a')];
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-20% 0px -70% 0px'});
+  document.querySelectorAll('main section,#intro').forEach(s=>obs.observe(s));
+})();
+</script>
+</body>
+</html>
